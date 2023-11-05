@@ -13,6 +13,7 @@
   }
 }
 
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -36,3 +37,80 @@
     transform: rotate(360deg);
   }
 }
+
+.Title {
+  color: #8458B3;
+  font-size: 48pt;
+  align-items: start;
+  margin-left: 20px;
+  font-family: "Poppins", extrabold;
+}
+
+.TitleContainer {
+  background-color: #d0bdf4;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-start;
+}
+
+.Title-font {
+  font-family: "Poppins", extrabold;
+}
+
+.Container {
+  /* flex-direction: row;
+  display: flex;
+  justify-content:flex-start;
+  background-color: #d0bdf4;
+  min-height: 100vh; */
+  background-color: #d0bdf4;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  /* align-items: center; */
+  justify-content:flex-start;
+  /* font-size: calc(10px + 2vmin); */
+}
+
+.Graphic {
+  /* width: 700px;
+  margin-left: 50px; */
+  width: 60%;
+  height: 60%;
+}
+
+.Slogan {
+  color: #8458B3;
+  font-size: 56pt;
+  align-items: start;
+  margin-left: 50px;
+  font-family: "Poppins", extrabold;
+  margin-top: 100px;
+}
+
+.Button {
+  color: #a0d2eb;
+  font-family: "Poppins";
+  font-size: 20pt;
+  width: 300px;
+  height: 70px;
+  background-color: #494d5f;
+  border-radius: 2cm;
+  border-style: hidden;
+}
+
+.Background {
+  background-color: '#d0bdf4';
+}
+
+/* Ice Cold: #a0d2eb
+
+Freeze Purple: #e5eaf5
+
+Medium Purple: #d0bdf4
+
+Purple Pain: #8458B3
+
+Heavy Purple: #494d5f */
+
