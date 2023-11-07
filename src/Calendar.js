@@ -1,62 +1,31 @@
-import logo from './logo.svg';
-//import graphic from './sample.jpg'
-import graphic from './graphic.png'
+import { useState } from 'react';
+import Calendar from 'react-calendar';
+import 'react-calendar/dist/Calendar.css';
 import './App.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFolderOpen } from '@fortawesome/free-solid-svg-icons'
+import NavigationBar from './NavigationBar';
 
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
+function Calendar() {
+  const [date, setDate] = useState(new Date());
+  const [currentDate] = useState(new Date());
 
-function App() {
+
+
   return (
-
-
-    <div className='TitleContainer'> 
-      <div >
-      <header className='Title'>Student Group Project Manager</header>
-      
-      {/* <FontAwesomeIcon icon={faFolderOpen} /> */}
-    </div>
-    <div className='Container'>
-      <img className = 'Graphic' src={graphic} />
-      {/* <text className='Title'>organize {'\n'} collaborate {'\n'} create</text> */}
-      {/* <text className='Title'> {`
-      organize
-      \ncollaborate
-      \ncreate
-      `} </text> */}
-      <div className='Slogan'>
-        organize <br /> collaborate <br /> create <br />
-        <button className='Button' >Sign up now!</button>
+    <div className='app'>
+      <NavigationBar /> 
+      <div className='title-container'>
+        <h1 className='title'>Calendar</h1>
       </div>
-
-    <div className='Container'>
-      
+      <div className='calendar-container'>
+        <Calendar onChange={setDate} value={date} />
+      </div>
+      <p className='date'>
+        <span className='bold'>Selected Date:</span> {date.toDateString()}
+        <br></br>
+        <span className='bold'>Current Date:</span> {currentDate.toDateString()}
+      </p>
     </div>
-      
-    </div>
-    </div>
-
   );
 }
 
-export default App;
+export default Calendar;
