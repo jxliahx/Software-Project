@@ -1,109 +1,3 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.Title {
-  color: #8458B3;
-  font-size: 48pt;
-  align-items: start;
-  margin-left: 20px;
-  font-family: "Poppins", extrabold;
-}
-
-.TitleContainer {
-  background-color: #d0bdf4;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content:flex-start;
-}
-
-.Title-font {
-  font-family: "Poppins", extrabold;
-}
-
-.Container {
-  /* flex-direction: row;
-  display: flex;
-  justify-content:flex-start;
-  background-color: #d0bdf4;
-  min-height: 100vh; */
-  background-color: #d0bdf4;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: row;
-  /* align-items: center; */
-  justify-content:flex-start;
-  /* font-size: calc(10px + 2vmin); */
-}
-
-.Graphic {
-  /* width: 700px;
-  margin-left: 50px; */
-  width: 60%;
-  height: 60%;
-}
-
-.Slogan {
-  color: #8458B3;
-  font-size: 56pt;
-  align-items: start;
-  margin-left: 50px;
-  font-family: "Poppins", extrabold;
-  margin-top: 100px;
-}
-
-.Button {
-  color: #a0d2eb;
-  font-family: "Poppins";
-  font-size: 20pt;
-  width: 300px;
-  height: 70px;
-  background-color: #494d5f;
-  border-radius: 2cm;
-  border-style: hidden;
-}
-
-.Background {
-  background-color: '#d0bdf4';
-}
-
 /* Ice Cold: #a0d2eb
 
 Freeze Purple: #e5eaf5
@@ -115,3 +9,157 @@ Purple Pain: #8458B3
 Heavy Purple: #494d5f */
 
 /*test*/
+.app {
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #d0bdf4; /* Set the background color */
+}
+
+.title-container {
+  margin-bottom: 10px; /* Add some spacing between the title and the calendar */
+  color: #8458B3; /* "Calendar" title color */
+  font-size: 30pt;
+  align-items: start;
+  margin-left: 20px;
+  font-family: "Poppins", extrabold;
+}
+
+.title {
+  color: #8458B3; /* Month-year title on calendar */
+  font-size: 2rem; /* Optional: Adjust the font size */
+}
+.date {
+  color:#8458B3;
+}
+
+.react-calendar { 
+  width: 1000px;
+  max-width: 100%;
+  height: 605px;
+  background-color: #e5eaf5;
+  color: #d0bdf4;
+  border-radius: 8px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  line-height: 1.125em;
+ }
+
+ .react-calendar__tile {
+  color: #494d5f; /* color of all numbers on calendar */
+  height: 100px;
+}
+
+.calendar-container{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+ .react-calendar__navigation button {
+  color: #8458b3;
+  min-width: 44px;
+  background: none;
+  font-size: 16px;
+  margin-top: 8px;
+ }
+ .react-calendar__navigation button:enabled:hover,
+ .react-calendar__navigation button:enabled:focus {
+  background-color: #494d5f;
+ }
+ .react-calendar__navigation button[disabled] {
+  background-color: #494d5f;
+ }
+ abbr[title] {
+  text-decoration: none;
+ }
+/*.react-calendar__month-view__days__day--weekend {
+  color: #a0d2eb; If I want to change the color of weekend dates to something else to make the weekends stand out from days ie. red
+ } 
+ */ 
+ .react-calendar__tile:enabled:hover,
+ .react-calendar__tile:enabled:focus {
+  background: #494d5f;
+  color: #a0d2eb;
+  border-radius: 6px;
+ }
+ .react-calendar__tile--now {
+  background: #6f48eb33; /* color of background of active date but not hovered over or clicked on */
+  border-radius: 6px;
+  font-weight: bold;
+  color: #6f48eb33; /* color of active date but not hovered over or clicked on */
+ }
+ .react-calendar__tile--now:enabled:hover,
+ .react-calendar__tile--now:enabled:focus {
+  background: #6f48eb33;
+  border-radius: 6px;
+  font-weight: bold;
+  color: #8458b3;
+ }
+ .react-calendar__tile--hasActive:enabled:hover,
+ .react-calendar__tile--hasActive:enabled:focus {
+  background: #f8f8fa;
+ }
+ .react-calendar__tile--active {
+  background: #494d5f; /* background color of date you have selected but once you click else where on page it stays selected */
+  border-radius: 6px;
+  font-weight: bold;
+  color: #a0d2eb; /* color of date you have clicked on */
+ }
+ .react-calendar__tile--active:enabled:hover,
+ .react-calendar__tile--active:enabled:focus {
+  background: #494d5f; /* background of color of date you have selected*/ 
+  color: #a0d2eb; /* color of date you have selected*/ 
+ }
+
+
+.navigation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 20px; /* Adjust the margin as needed */
+}
+
+.dropdown-button {
+  background-color: #d0bdf4; /* Button background color */
+  color: #8458b3; /* Button text color */
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 30pt; 
+  font-family: "Poppins"; /* Change the font-family */
+  font-weight: bold; /* Make the text bold */
+}
+.dropdown-button:hover {
+  background-color: #494d5f; /* Background color on hover */
+  color: #a0d2eb;
+}
+
+.dropdown-menu {
+  position: absolute;
+  background-color: #d0bdf4; /* Dropdown background color */
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  z-index: 1;
+}
+
+.dropdown-menu li {
+  padding: 10px;
+}
+
+.dropdown-menu li a {
+  text-decoration: none;
+  color: #494d5f; /* Dropdown link color */
+  display: block;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #494d5f; /* Background color on hover */
+  color: #a0d2eb;
+}
+
+ 
+ 
