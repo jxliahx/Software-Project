@@ -11,12 +11,13 @@ app.use(
     credentials: true,
   })
 );
+
+//middleware
 app.use(express.json());
 
 //Routes
 const usersRoutes = require("./Routes/users");
 app.use(`/api/users`, usersRoutes);
-app.use(express.json());
 
 app.listen(port, () => {
   console.log(`Server is running`);
