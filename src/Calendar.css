@@ -8,7 +8,6 @@ Purple Pain: #8458B3
 
 Heavy Purple: #494d5f */
 
-/*test*/
 .app {
   text-align: center;
   min-height: 100vh;
@@ -43,6 +42,7 @@ Heavy Purple: #494d5f */
   background-color: #e5eaf5;
   color: #d0bdf4;
   border-radius: 8px;
+  border: none;
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
   line-height: 1.125em;
  }
@@ -68,6 +68,7 @@ Heavy Purple: #494d5f */
  .react-calendar__navigation button:enabled:hover,
  .react-calendar__navigation button:enabled:focus {
   background-color: #494d5f;
+  color: #a0d2eb;
  }
  .react-calendar__navigation button[disabled] {
   background-color: #494d5f;
@@ -93,20 +94,20 @@ Heavy Purple: #494d5f */
  }
  .react-calendar__tile--now:enabled:hover,
  .react-calendar__tile--now:enabled:focus {
-  background: #6f48eb33;
+  background: #494d5f;
   border-radius: 6px;
   font-weight: bold;
-  color: #8458b3;
+  color: #a0d2eb;
  }
  .react-calendar__tile--hasActive:enabled:hover,
  .react-calendar__tile--hasActive:enabled:focus {
   background: #f8f8fa;
  }
  .react-calendar__tile--active {
-  background: #494d5f; /* background color of date you have selected but once you click else where on page it stays selected */
+  background: #494d5f; /* date you have selected but one you click somewhere else on the page it stays highlighted*/
   border-radius: 6px;
   font-weight: bold;
-  color: #a0d2eb; /* color of date you have clicked on */
+  color: #a0d2eb; /* date you have selected but one you click somewhere else on the page it stays highlighted*/
  }
  .react-calendar__tile--active:enabled:hover,
  .react-calendar__tile--active:enabled:focus {
@@ -114,6 +115,7 @@ Heavy Purple: #494d5f */
   color: #a0d2eb; /* color of date you have selected*/ 
  }
 
+/* NavigationBar css */
 
 .navigation {
   position: absolute;
@@ -161,5 +163,43 @@ Heavy Purple: #494d5f */
   color: #a0d2eb;
 }
 
- 
- 
+/* TimeSchedule.css */
+
+.daySchedule {
+  position: fixed;
+  top: 225px;
+  right: 60px; /* Position to the far right */
+  width: 300px;
+  height: 500px; /* Adjust the height as needed */
+  z-index: 9999;
+  background-color: #e5eaf5;
+  color: #8458b3;
+  border-radius: 8px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  line-height: 1.125em;
+  padding: 10px;
+}
+
+.dayScheduleHeader h2 {
+  margin: 0;
+  padding: 20px;
+}
+
+
+.daySchedule p {
+  padding: 20px;
+  font-size: 16px;
+  color: #494d5f;
+}
+
+.daySchedule button {
+  background: #e5eaf5; /* background blends in */
+  border: none;
+  color: #8458b3;
+  font-size: 20px;
+   top: 0px;
+  right: 0;
+  position: absolute;
+  padding: 10px;
+  border-radius: 8px; 
+}
