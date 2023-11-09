@@ -1,4 +1,5 @@
 const express = require("express");
+const cookieParser = require("cookie-parser");
 const dbConnection = require("../utils/database");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
@@ -39,15 +40,15 @@ router.post("/login", (req, res) => {
           const email = result[0].email;
           const token = jwt.sign(
             {
-              email: email,
-              id: result[0].id,
+              email: result[0].Email,
+              id: result[0].UserID,
               firstName: result[0].FirstName,
             },
             "Student_Group_PM",
             { expiresIn: "1d" }
           );
           res.cookie("token", token);
-          return res.json({ loginStatus: true, id: result[0].id });
+          return res.json({ loginStatus: true, id: result[0].UserID });
         }
       });
     } else {
