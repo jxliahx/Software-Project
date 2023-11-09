@@ -3,7 +3,7 @@ import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import './Calendar.css';
 import NavigationBar from './NavigationBar';
-import TimeSchedule from './TimeSchedule'; // Import the TimeSchedule component
+import TimeSchedule from './TimeSchedule'; 
 
 function Calendar() {
   const [date, setDate] = useState(new Date());
