@@ -37,7 +37,6 @@ router.post("/login", (req, res) => {
         if (err)
           return res.json({ loginStatus: false, Error: "Wrong Password" });
         if (response) {
-          const email = result[0].email;
           const token = jwt.sign(
             {
               email: result[0].Email,
@@ -57,7 +56,7 @@ router.post("/login", (req, res) => {
   });
 });
 
-// This API returns a single user. Example: http://localhost:5000/api/users/detail/tungngo
+// This API returns details of a single user. Example: http://localhost:5000/api/users/detail/tungngo
 router.get("/detail/:username", (req, res) => {
   const sql = "SELECT * FROM UsersInfo where Username = ?";
   dbConnection.query(sql, [req.params.username], (err, result) => {
