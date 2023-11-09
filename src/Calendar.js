@@ -3,7 +3,7 @@ import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import './Calendar.css';
 import NavigationBar from './NavigationBar';
-import TimeSchedule from './TimeSchedule'; 
+import TimeSchedule from './TimeSchedule';
 
 function Calendar() {
   const [date, setDate] = useState(new Date());
@@ -22,7 +22,9 @@ function Calendar() {
     <div className='app'>
       <NavigationBar /> 
       <div className='title-container'>
-        <h1 className='title'>Calendar</h1>
+        <h1 className='title'>Calendar
+        <br>
+        </br><button>Back</button></h1>
       </div>
       <div className='calendar-container'>
         <Calendar onChange={setDate} value={date} onClickDay={openTimeSchedule} />

@@ -1,3 +1,5 @@
+
+
 /* Ice Cold: #a0d2eb
 
 Freeze Purple: #e5eaf5
@@ -25,6 +27,24 @@ Heavy Purple: #494d5f */
   align-items: start;
   margin-left: 20px;
   font-family: "Poppins", extrabold;
+  position: relative;
+  background-color:#d0bdf4;
+  width: 1000px;
+}
+
+.title button {
+  color: #8458B3; /* Back button color */
+  background-color: #d0bdf4;
+  border: none;
+  position: absolute;
+  left: 0px ;
+  bottom: 0px;
+  margin-bottom: 10px;
+}
+
+.title button:hover {
+  background-color: #494d5f; /* Background color on hover */
+  color: #a0d2eb;
 }
 
 .title {
@@ -43,9 +63,11 @@ Heavy Purple: #494d5f */
   color: #d0bdf4;
   border-radius: 8px;
   border: none;
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 12px 24px #8458B3;;
   line-height: 1.125em;
  }
+
+
 
  .react-calendar__tile {
   color: #494d5f; /* color of all numbers on calendar */
@@ -175,7 +197,7 @@ Heavy Purple: #494d5f */
   background-color: #e5eaf5;
   color: #8458b3;
   border-radius: 8px;
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 12px 24px #8458B3;
   line-height: 1.125em;
   padding: 10px;
 }
@@ -197,9 +219,15 @@ Heavy Purple: #494d5f */
   border: none;
   color: #8458b3;
   font-size: 20px;
-   top: 0px;
+  top: 0px;
   right: 0;
   position: absolute;
   padding: 10px;
   border-radius: 8px; 
 }
+
+.daySchedule button:hover {
+  background-color: #494d5f; /* Background color on hover */
+  color: #a0d2eb;
+}
+
