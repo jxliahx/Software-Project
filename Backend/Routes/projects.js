@@ -5,7 +5,7 @@ const jwt = require("jsonwebtoken");
 
 const router = express.Router();
 
-router.use(cookieParser);
+router.use(cookieParser());
 
 // This API add a new record into Projects
 router.post("/add", (req, res) => {
