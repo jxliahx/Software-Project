@@ -5,6 +5,7 @@ const bcrypt = require("bcrypt");
 
 const router = express.Router();
 
+// This API add a new record into UsersInfo table with the hashed password
 router.post("/signup", (req, res) => {
   const sql = `INSERT INTO UsersInfo 
     (FirstName,LastName,Username,Email,Password) 
@@ -25,6 +26,7 @@ router.post("/signup", (req, res) => {
   });
 });
 
+// This API allow a user to login, it creates a cookie for that user.
 router.post("/login", (req, res) => {
   const sql = "SELECT * from UsersInfo Where Username = ?";
   dbConnection.query(sql, [req.body.username], (err, result) => {
@@ -54,7 +56,8 @@ router.post("/login", (req, res) => {
   });
 });
 
-router.get("/detail/?username", (req, res) => {
+// This API returns a single user. Example: http://localhost:5000/api/users/detail/tungngo
+router.get("/detail/:username", (req, res) => {
   const sql = "SELECT * FROM UsersInfo where Username = ?";
   dbConnection.query(sql, [req.params.username], (err, result) => {
     if (err) return res.json({ Status: false });
@@ -62,6 +65,7 @@ router.get("/detail/?username", (req, res) => {
   });
 });
 
+// This API delete the cookie when user logout
 router.get("/logout", (req, res) => {
   res.clearCookie("token");
   return res.json({ Status: true });
