@@ -1,10 +1,14 @@
 :root {
     --main-radius: 30px;
     --main-padding: 20px;
+    
 }
 
 body {
     font-family: "Poppins", bold;
+    
+    
+   
 }
   
 .container {
@@ -17,14 +21,18 @@ body {
       "nav nav nav nav"
       "content1 main main content2"
       "content1 main main content3";
-    grid-gap: 0.8rem;
+    grid-gap: 10px;
     font-weight: 800;
     font-size: 40px;
     color:  #494d5f;
     text-align: center;
+    margin: 0;
+    
+
 }
 
 .nav {
+    top: 10px;
     grid-area: nav;
     text-align: center;
     font-size: 40px;
@@ -57,6 +65,8 @@ button3:hover {
     border-width: 5px;
     border-color:#727088;
     position: relative;
+    bottom: 20px;
+
   }
 
 button4{
@@ -83,6 +93,7 @@ button4:hover {
     border-radius: var(--main-radius);
     padding-top: var(--main-padding);
     position: relative;
+    margin: 20px;
     
     
 }
@@ -96,6 +107,7 @@ button4:hover {
     font-size: 30px;
     border-radius: var(--main-radius);
     padding-top: var(--main-padding);
+    margin: 20px;
   }
   
 .content3 {
@@ -107,6 +119,7 @@ button4:hover {
     font-size: 30px;
     border-radius: var(--main-radius);
     padding-top: var(--main-padding);
+    margin: 20px;
   }
   
 
