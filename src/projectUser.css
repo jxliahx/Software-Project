@@ -17,7 +17,7 @@ body {
       "nav nav nav nav"
       "content1 main main content2"
       "content1 main main content3";
-    grid-gap: 0.8rem;
+    grid-gap: 10px;
     font-weight: 800;
     font-size: 40px;
     color:  #494d5f;
@@ -28,6 +28,7 @@ body {
     grid-area: nav;
     text-align: center;
     font-size: 40px;
+    margin: 20px;
   }
   
 .main {
@@ -39,6 +40,7 @@ body {
     border-style: dashed;
     border-width: 5px;
     border-color:#727088;
+    margin: 20px;
   }
   
 
@@ -48,6 +50,7 @@ body {
     grid-area: content1;
     border-radius: var(--main-radius);
     padding-top: var(--main-padding);
+    margin: 20px;
     
 }
   
@@ -60,6 +63,7 @@ body {
     font-size: 30px;
     border-radius: var(--main-radius);
     padding-top: var(--main-padding);
+    margin: 20px;
   }
   
 .content3 {
@@ -71,6 +75,7 @@ body {
     font-size: 30px;
     border-radius: var(--main-radius);
     padding-top: var(--main-padding);
+    margin: 20px;
   }
   
 
