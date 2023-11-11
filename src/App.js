@@ -2,11 +2,14 @@ import logo from './logo.svg';
 //import graphic from './sample.jpg'
 import graphic from './graphic.png'
 import './App.css';
-import createPage from './createPage';
+import './KFstyle.css';
+import Login from './login';
+import Signup from './signup';
+import TaskApproval from './taskApproval';
+import Task from './task';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFolderOpen } from '@fortawesome/free-solid-svg-icons'
-import { Routes, Route } from "react-router-dom"
-import createPage from './createPage'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 // function App() {
 //   return (
@@ -31,17 +34,18 @@ import createPage from './createPage'
 
 function App() {
   return (
-
+    <Router>
     <div className='App'>
-      <Routes>
-        {/* this line of code is commented out for now 
-            once we have the Homepage function done, we can uncomment
-            the path = "/" means that this will be the page that is rendered first when we run it
-        <Route path = "/" element = {<Homepage/>} />
-        */}
-        <Route path = '/createPage' element = {<createPage/>} />
-      </Routes>
+      <Switch>
+      <Route path="/login">
+          < Login />
+        </Route>
+      <Route path="/signup">
+          < Signup />
+        </Route>
+    </Switch>
     </div>
+    </Router>
 
     // move this code into homepage.js
     // <div className='TitleContainer'> 
