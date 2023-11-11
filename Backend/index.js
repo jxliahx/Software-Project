@@ -1,15 +1,16 @@
 const express = require("express");
 const cors = require("cors");
+const dotenv = require("dotenv").config();
 //const authJwt = require("./utils/jwt");
 //const errorHandler = require("./utils/errorHandler");
 
-const port = 5000;
-
 const app = express();
+const port = process.env.PORT;
+console.log(port);
 app.use(express.urlencoded({ extended: true }));
 app.use(
   cors({
-    origin: "*",
+    origin: ["https://cs476-StudentGroupPM-backend.onrender.com"],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
@@ -28,5 +29,5 @@ const projectsRoutes = require("./Routes/projects");
 app.use(`/api/projects`, projectsRoutes);
 
 app.listen(port, () => {
-  console.log(`Server is running`);
+  console.log(`Server is running at ${port}`);
 });

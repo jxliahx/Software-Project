@@ -1,9 +1,12 @@
 const express = require("express");
 const cors = require("cors");
+const dotenv = require("dotenv").config();
 const cookieParser = require("cookie-parser");
 const dbConnection = require("../utils/database");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
+
+const secret = process.env.SECRET;
 
 const router = express.Router();
 router.use(express.urlencoded({ extended: true }));
@@ -46,7 +49,7 @@ router.post("/login", (req, res) => {
               id: result[0].UserID,
               firstName: result[0].FirstName,
             },
-            "Student_Group_PM",
+            secret,
             { expiresIn: "1d" }
           );
           res.cookie("token", token);
@@ -59,8 +62,8 @@ router.post("/login", (req, res) => {
   });
 });
 
-// This API returns details of a single user. Example: http://localhost:5000/api/users/detail/tungngo
-router.get("/detail/:username", (req, res) => {
+// This API returns details of a single user. Example: https://cs476-StudentGroupPM-backend.onrender.com/api/users/detail/tungngo
+router.post("/detail/:username", (req, res) => {
   const sql = "SELECT * FROM UsersInfo where Username = ?";
   dbConnection.query(sql, [req.params.username], (err, result) => {
     if (err) return res.json({ Status: false });
@@ -69,12 +72,12 @@ router.get("/detail/:username", (req, res) => {
 });
 
 // This API delete the cookie when user logout
-router.get("/logout", (req, res) => {
+router.post("/logout", (req, res) => {
   res.clearCookie("token");
   return res.json({ Status: true });
 });
 
-router.get("/", async function (req, res) {
+router.post("/", async function (req, res) {
   const sql = "SELECT * FROM UsersInfo";
   dbConnection.query(sql, (err, result) => {
     if (err) return res.json({ Status: false });
