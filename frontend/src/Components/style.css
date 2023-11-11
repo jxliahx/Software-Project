@@ -1,0 +1,13 @@
+.taskPage {
+    background-color: #845BB3;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 120%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.taskForm {
+    background-color: #A0D2EB;
+    color: white;
+}
