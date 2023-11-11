@@ -71,4 +71,10 @@ router.get("/logout", (req, res) => {
   return res.json({ Status: true });
 });
 
+router.get("/", function (req, res) {
+  res.render("Users Route", {});
+});
+
 module.exports = router;
+
+

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./style.css";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const TaskWork = () => {
@@ -15,13 +15,17 @@ const TaskWork = () => {
     isComplete: false,
   };
 
+  function eventhandling() {
+    //navigate("/Home");
+  }
+
   return (
     <div className="d-flex justify-content-center align-items-center vh-100 taskPage">
-      <div className="p-3 rounded justify-content-center align-items-center w-25 border taskForm">
-        <div>
+      <div className="container p-3 rounded justify-content-center align-items-center w-25 border taskForm">
+        <div className="justify-content-center">
           <h2>{values.projectName}</h2>
         </div>
-        <div>
+        <div className="justify-content-center">
           <h3>{values.taskName}</h3>
           <br />
           <p>{values.description}</p>
@@ -33,8 +37,17 @@ const TaskWork = () => {
         </div>
         <div>
           <form action="" method="POST">
-            <input type="file"></input>
-            <button type="submit">Submit</button>
+            <label for="formFileLg" class="form-label">
+              Upload your file here
+            </label>
+            <input
+              class="form-control form-control-lg"
+              id="formFileLg"
+              type="file"
+            />
+            <button type="button" class="btn btn-success mt-10">
+              Submit
+            </button>
           </form>
         </div>
       </div>
