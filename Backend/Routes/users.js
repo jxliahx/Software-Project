@@ -63,7 +63,7 @@ router.post("/login", (req, res) => {
 });
 
 // This API returns details of a single user. Example: https://cs476-StudentGroupPM-backend.onrender.com/api/users/detail/tungngo
-router.post("/detail/:username", (req, res) => {
+router.get("/detail/:username", (req, res) => {
   const sql = "SELECT * FROM UsersInfo where Username = ?";
   dbConnection.query(sql, [req.params.username], (err, result) => {
     if (err) return res.json({ Status: false });
@@ -72,12 +72,12 @@ router.post("/detail/:username", (req, res) => {
 });
 
 // This API delete the cookie when user logout
-router.post("/logout", (req, res) => {
+router.get("/logout", (req, res) => {
   res.clearCookie("token");
   return res.json({ Status: true });
 });
 
-router.post("/", async function (req, res) {
+router.get("/", function (req, res) {
   const sql = "SELECT * FROM UsersInfo";
   dbConnection.query(sql, (err, result) => {
     if (err) return res.json({ Status: false });
