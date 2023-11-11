@@ -28,20 +28,20 @@ export default function Signup() {
         </h1>
         <form class="signupBox" onSubmit={handleSubmit(onSubmit)}>
             <p>First Name: </p>
-            <input {...register("fname", { required: true })} style={errors.fname && { border: "2px solid red" }}/>
+            <input class="Kinput" {...register("fname", { required: true })} style={errors.fname && { border: "2px solid red" }}/>
             <p>Last Name: </p>
-            <input {...register("lname", { required: true })} style={errors.lname && { border: "2px solid red" }}/>
+            <input class="Kinput" {...register("lname", { required: true })} style={errors.lname && { border: "2px solid red" }}/>
             <p>Username:</p>
-            <input {...register("uname", { required: true })} style={errors.uname && { border: "2px solid red" }}/>
+            <input class="Kinput" {...register("uname", { required: true })} style={errors.uname && { border: "2px solid red" }}/>
             <p>Email:</p>
-            <input {...register("email", { required: true, pattern: {
+            <input class="Kinput" {...register("email", { required: true, pattern: {
         value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
         message: "Email in incorrect format"
       }})} 
             style={errors.email && { border: "2px solid red" }}/>
             {errors.email && <error>{errors.email.message}</error>}
             <p>Password:</p>
-            <input type={type} {...register("pwd", { required: true,minLength: {
+            <input class="Kinput" type={type} {...register("pwd", { required: true,minLength: {
         value: 8,
         message: "Password is less than 8 characters"
       } })} style={errors.pwd && { border: "2px solid red" }} />
@@ -50,7 +50,7 @@ export default function Signup() {
               </span>
               {errors.pwd && <error>{errors.pwd.message}</error>}
             <p>Confirm Password:</p>
-            <input type={type} {...register("cpwd", { required: true , validate: (value) => value === pwd || "Passwords don't match"})}
+            <input class="Kinput" type={type} {...register("cpwd", { required: true , validate: (value) => value === pwd || "Passwords don't match"})}
             style={errors.cpwd && { border: "2px solid red" }  }  />
             <span class="flex justify-around items-center" onClick={handleToggle}>
             <Icon class="absolute mr-10" icon={icon} size={20}/>
