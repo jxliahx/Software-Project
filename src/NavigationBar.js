@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import {Link} from 'react-router-dom';
 
 const NavigationBar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -14,10 +15,10 @@ const NavigationBar = () => {
   };
 
   const navigationLinks = [
-    { label: 'Home', url: '/' },
+    { label: 'Home', url: '/home' },
     { label: 'Create Projects', url: '/about' },
-    { label: 'Invitations', url: '/services' },
-    { label: 'Calendar', url: '/contact' },
+    { label: 'Invitations', url: '/Invitation' },
+    { label: 'Calendar', url: '/Calendar' },
     { label: 'Signout', url: '/contact' },
   ];
 

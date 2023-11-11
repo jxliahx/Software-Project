@@ -23,7 +23,7 @@ export default function Signup() {
     }
  }
 
-    return (<div class="Container">
+    return (<div class="ContainerK">
         <h1 class="s">Welcome to SGPM<ul class="member">Already a member? <Link to="/login">Login</Link></ul>
         </h1>
         <form class="signupBox" onSubmit={handleSubmit(onSubmit)}>

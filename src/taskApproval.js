@@ -1,5 +1,5 @@
-import CheckIcon from '@mui/icons-material/Check';
-import CloseIcon from '@mui/icons-material/Close';
+/*import CheckIcon from '@mui/icons-material/Check';*/
+/*import CloseIcon from '@mui/icons-material/Close';*/
 import React, { useState } from 'react';
 export default function TaskApproval(){
 
@@ -53,7 +53,7 @@ return (
                 </div>
             </div>
             <div class="yn">
-            <button class="yes"><CheckIcon/></button><button class="no"><CloseIcon/></button>
+            <button class="yes"></button><button class="no"></button>
             </div>
         </form>
     </div>

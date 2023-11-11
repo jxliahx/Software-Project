@@ -21,7 +21,7 @@ export default function Login() {
     }
  }
     return (
-        <div class="Container">
+        <div class="ContainerK">
             <h1 class="wb">Welcome Back!</h1>
             <form class="loginBox" onSubmit={handleSubmit(onSubmit)}>
                 <p>Username:</p>
@@ -34,7 +34,7 @@ export default function Login() {
                   <Icon class="absolute mr-10" icon={icon} size={20}/>
               </span>
               {errors.pwd && <error>{errors.pwd.message}</error>}
-                <button class="lb">Login</button>
+                <button class="lb"><Link to="/Landing">Login</Link></button>
                 <p class="nm">Not a member?<Link to="/signup">Sign Up Here</Link></p>
             </form>
         </div>
