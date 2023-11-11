@@ -76,6 +76,7 @@ router.get("/", function (req, res) {
   dbConnection.query(sql, (err, result) => {
     if (err) return res.json({ Status: false });
     return res.json(result);
+  });
 });
 
 module.exports = router;
