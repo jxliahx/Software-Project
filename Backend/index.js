@@ -9,7 +9,10 @@ const port = process.env.PORT;
 app.use(express.urlencoded({ extended: true }));
 app.use(
   cors({
-    origin: ["https://cs476-StudentGroupPM-backend.onrender.com"],
+    origin: [
+      "https://cs476-StudentGroupPM-backend.onrender.com",
+      "http://localhost:5000",
+    ],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
