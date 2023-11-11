@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import graphic from './graphic.png'
 import './App.css';
 import './KFstyle.css';
+import Home from './home';
 import Login from './login';
 import Signup from './signup';
 import TaskApproval from './taskApproval';
@@ -37,6 +38,9 @@ function App() {
     <Router>
     <div className='App'>
       <Switch>
+      <Route exact path="/home">
+        <Home/>
+      </Route>
       <Route path="/login">
           < Login />
         </Route>

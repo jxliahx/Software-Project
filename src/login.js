@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import {Icon} from 'react-icons-kit';
 import {eyeOff} from 'react-icons-kit/feather/eyeOff';
 import {eye} from 'react-icons-kit/feather/eye';
+import { Link } from 'react-router-dom';
 
 
 export default function Login() {
@@ -34,7 +35,7 @@ export default function Login() {
               </span>
               {errors.pwd && <error>{errors.pwd.message}</error>}
                 <button class="lb">Login</button>
-                <p class="nm">Not a member?<a href="/signup">Sign Up Here</a></p>
+                <p class="nm">Not a member?<Link to="/signup">Sign Up Here</Link></p>
             </form>
         </div>
     )

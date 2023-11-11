@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import {Icon} from 'react-icons-kit';
 import {eyeOff} from 'react-icons-kit/feather/eyeOff';
 import {eye} from 'react-icons-kit/feather/eye';
+import {Link} from 'react-router-dom';
 
 
 export default function Signup() {
@@ -23,7 +24,7 @@ export default function Signup() {
  }
 
     return (<div class="Container">
-        <h1 class="s">Welcome to SGPM<ul class="member">Already a member? <a href="/login">Login</a></ul>
+        <h1 class="s">Welcome to SGPM<ul class="member">Already a member? <Link to="/login">Login</Link></ul>
         </h1>
         <form class="signupBox" onSubmit={handleSubmit(onSubmit)}>
             <p>First Name: </p>
