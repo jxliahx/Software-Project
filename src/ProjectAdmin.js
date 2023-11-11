@@ -1,12 +1,13 @@
 import React from 'react';
 import './ProjectAdmin.css';
 import { BiEdit } from "react-icons/bi";
+import NavigationBar from './NavigationBar';
+import './NavigationBar.css';
  
-
-
 function ProjectAdmin() {
     return (
      <div className='container'>
+      <NavigationBar />
 
       
       <div className='nav'> Example Project 

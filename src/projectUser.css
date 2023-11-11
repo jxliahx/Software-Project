@@ -8,7 +8,7 @@ body {
 }
   
 .container {
-    background-image: url("clouds.png");
+    background-color:#d0bdf4;
     display: grid;
     height: 100vh;
     grid-template-columns: 1.0fr 1.0fr 1fr 1fr;
@@ -20,9 +20,11 @@ body {
     grid-gap: 10px;
     font-weight: 800;
     font-size: 40px;
-    color:  #494d5f;
+    color:  #8458b3;
     text-align: center;
+    
 }
+
 
 .nav {
     grid-area: nav;
@@ -32,14 +34,12 @@ body {
   }
   
 .main {
-    background-color:#b7a4b4da;
-   
+    background-color:#e5eaf5;
     grid-area: main;
     border-radius: var(--main-radius);
     padding-top: var(--main-padding);
+    border: 3px solid #8458b3;
     border-style: dashed;
-    border-width: 5px;
-    border-color:#727088;
     margin: 20px;
   }
   
@@ -52,14 +52,14 @@ body {
     padding-top: var(--main-padding);
     margin: 20px;
     
+    
 }
   
 .content2 {
     grid-area: content2;
+    border: 3px solid #8458b3;
     border-style: dashed; 
-    border-width: 5px;
-    border-color: #727088; 
-    background-color:#b7a4b4da;
+    background-color:#e5eaf5;
     font-size: 30px;
     border-radius: var(--main-radius);
     padding-top: var(--main-padding);
@@ -68,10 +68,9 @@ body {
   
 .content3 {
     grid-area: content3;
-    border-style: dashed; 
-    border-width: 5px;
-    border-color:#727088;
-    background-color:#b7a4b4da;
+    border: 3px solid #8458b3;
+    border-style: dashed;
+    background-color:#e5eaf5;
     font-size: 30px;
     border-radius: var(--main-radius);
     padding-top: var(--main-padding);
@@ -83,10 +82,9 @@ body {
   section{
     font-size: 28px;
     text-align: left;
+    border: 3px solid #8458b3;
     border-style: dashed;
-    border-width: 5px;
-    border-color:#727088;
-    background-color:#b7a4b4da;
+    background-color:#e5eaf5;
     margin-bottom: 5%; 
     border-radius: var(--main-radius);
 

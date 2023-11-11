@@ -1,14 +1,19 @@
 import React from 'react';
 import './projectUser.css';
+import NavigationBar from './NavigationBar';
+import './NavigationBar.css';
  
 
 
 function ProjectUser() {
     return (
      <div className='container'>
-
+      
+      <NavigationBar />
+     
       
       <div className='nav'> Example Project 
+      
        </div>
 
        <div className = 'content1'> Members

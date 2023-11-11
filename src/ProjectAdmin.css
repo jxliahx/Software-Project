@@ -12,7 +12,7 @@ body {
 }
   
 .container {
-    background-image: url("clouds.png");
+    background-color:#d0bdf4;
     display: grid;
     height: 100vh;
     grid-template-columns: 1.0fr 1.0fr 1fr 1fr;
@@ -56,14 +56,12 @@ button3:hover {
 }
   
 .main {
-    background-color:#b7a4b4da;
-   
+    background-color:#e5eaf5;
     grid-area: main;
     border-radius: var(--main-radius);
     padding-top: var(--main-padding);
+    border: 3px solid #8458b3;
     border-style: dashed;
-    border-width: 5px;
-    border-color:#727088;
     position: relative;
     bottom: 20px;
 
@@ -100,10 +98,9 @@ button4:hover {
   
 .content2 {
     grid-area: content2;
+    border: 3px solid #8458b3;
     border-style: dashed; 
-    border-width: 5px;
-    border-color: #727088; 
-    background-color:#b7a4b4da;
+    background-color:#e5eaf5;
     font-size: 30px;
     border-radius: var(--main-radius);
     padding-top: var(--main-padding);
@@ -112,10 +109,9 @@ button4:hover {
   
 .content3 {
     grid-area: content3;
-    border-style: dashed; 
-    border-width: 5px;
-    border-color:#727088;
-    background-color:#b7a4b4da;
+    border: 3px solid #8458b3;
+    border-style: dashed;
+    background-color:#e5eaf5;
     font-size: 30px;
     border-radius: var(--main-radius);
     padding-top: var(--main-padding);
@@ -127,10 +123,9 @@ button4:hover {
   section{
     font-size: 28px;
     text-align: left;
+    border: 3px solid #8458b3;
     border-style: dashed;
-    border-width: 5px;
-    border-color:#727088;
-    background-color:#b7a4b4da;
+    background-color:#e5eaf5;
     margin-bottom: 5%; 
     border-radius: var(--main-radius);
 
