@@ -1,7 +1,8 @@
 import React from 'react';
 import SenderForm from './SenderForm';
 import ReceiverForm from './ReceiverForm';
-import './Invitation.css'
+import TaskInvitation from './TaskInvitation';
+import './Invitation.css';
 import NavigationBar from './NavigationBar';
 
 function Invitation() {

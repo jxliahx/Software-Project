@@ -8,7 +8,7 @@ import Login from './login';
 import Signup from './signup';
 import TaskApproval from './taskApproval';
 import Task from './task';
-import Calendar from './Calendar';
+import Calendar1 from './Calendar';
 import Invitation from './Invitation';
 import Landing from './Landing';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -60,7 +60,7 @@ function App() {
         <Invitation/>
       </Route>
       <Route path='/Calendar'>
-        <Calendar/>
+        <Calendar1/>
       </Route>
       <Route path='/Landing'>
         <Landing/>

@@ -5,7 +5,7 @@ import './Calendar.css';
 import NavigationBar from './NavigationBar';
 import TimeSchedule from './TimeSchedule';
 
-function Calendar() {
+function Calendar1() {
   const [date, setDate] = useState(new Date());
   const [currentDate] = useState(new Date());
   const [isTimeScheduleOpen, setTimeScheduleOpen] = useState(false);
@@ -42,4 +42,4 @@ function Calendar() {
   );
 }
 
-export default Calendar;
+export default Calendar1;
