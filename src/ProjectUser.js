@@ -25,11 +25,26 @@ function ProjectUser() {
         </section>
         </div>
 
-        <div className='main'>Current Tasks
-   
-      
- 
-        </div>
+        <div class="main">
+    <div class="title">Current Tasks</div>
+    <div class="smallGridContainer">
+        <div class="smallGridItem">
+          <div className='title'>Item 1</div> 
+          <p>Assigned to:</p>
+          <p>Due date:</p>
+          </div>
+        <div class="smallGridItem">
+        <div className='title'>Item 2</div> 
+          <p>Assigned to:</p>
+          <p>Due date:</p>
+          </div>
+          <div class="smallGridItem">
+          <div className='title'>Item 3</div> 
+          <p>Assigned to:</p>
+          <p>due date:</p>
+          </div>
+    </div>
+</div>
 
         <div className='content2'>Awaiting Approval
         <ul>

@@ -188,3 +188,35 @@ button2 {
     background-color: #494d5f; /* Background color on hover */
     color: #a0d2eb;
 }
+
+.smallGridContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    margin:10px;
+}
+
+.smallGridItem {
+    border: 3px solid #8458b3;
+    background-color: #e5eaf5;
+    font-size: 18px;
+    border-radius: 15px;
+    padding: 50px;
+    
+}
+p{
+    text-align:left;
+}
+
+button5{
+    background: none;
+    color: #494d5f;
+    border: none;
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 8px;   
+}
+button5:hover {
+    background-color: #494d5f; /* Background color on hover */
+    color: #a0d2eb;
+}

@@ -116,7 +116,24 @@ li:hover {
     grid-template-columns: 200px 200px; 
     border-radius: var(--main-radius);
     box-sizing: border-box;
-
     margin-left: 10px;
 
 }
+
+.smallGridContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    margin:10px;
+}
+
+.smallGridItem {
+    border: 3px solid #8458b3;
+    background-color: #e5eaf5;
+    font-size: 18px;
+    border-radius: 15px;
+    padding: 50px;
+    
+}
+
+

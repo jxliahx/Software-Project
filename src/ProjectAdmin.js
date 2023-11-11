@@ -27,12 +27,33 @@ function ProjectAdmin() {
         <button2>Send Invitation</button2>
         </div>
         
-
-        <div className='main'>Current Tasks
+        <div class="main">
         <button4>< BiEdit/></button4>
+    <div class="title">Current Tasks</div>
+    <div class="smallGridContainer">
+        <div class="smallGridItem">
+        
+          <div className='title'>Item 1  <button5>< BiEdit/></button5></div> 
+          <p>Assigned to:</p>
+          <p>Due date:</p>
+          </div>
+        <div class="smallGridItem">
+        <div className='title'>Item 2<button5>< BiEdit/></button5></div> 
+        <p>Assigned to:</p>
+          <p>Due date:</p>
+          </div>
+          <div class="smallGridItem">
+          <div className='title'>Item 3 <button5>< BiEdit/></button5></div> 
+          <p>Assigned to:</p>
+          <p>Due date:</p>
+          </div>
+    </div>
+</div>
+        
+        
       
  
-        </div>
+        
 
         <div className='content2'>Awaiting Approval
         <ul>
