@@ -8,6 +8,9 @@ import Login from './login';
 import Signup from './signup';
 import TaskApproval from './taskApproval';
 import Task from './task';
+import Calendar from './Calendar';
+import Invitation from './Invitation';
+import Landing from './Landing';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFolderOpen } from '@fortawesome/free-solid-svg-icons'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
@@ -52,6 +55,15 @@ function App() {
       </Route>
       <Route path="/taskApproval">
         < TaskApproval />
+      </Route>
+      <Route path="/Invitation">
+        <Invitation/>
+      </Route>
+      <Route path='/Calendar'>
+        <Calendar/>
+      </Route>
+      <Route path='/Landing'>
+        <Landing/>
       </Route>
     </Switch>
     </div>

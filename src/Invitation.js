@@ -4,7 +4,7 @@ import ReceiverForm from './ReceiverForm';
 import './Invitation.css'
 import NavigationBar from './NavigationBar';
 
-function App() {
+function Invitation() {
   return (
     <div className='page'>
       <NavigationBar /> 
@@ -15,4 +15,4 @@ function App() {
   );
 }
 
-export default App;
+export default Invitation;
