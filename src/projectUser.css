@@ -41,7 +41,12 @@ body {
     border: 3px solid #8458b3;
     border-style: dashed;
     margin: 20px;
+    overflow:auto;
   }
+
+  .main::-webkit-scrollbar {
+    width: 12px; /* Set the width of the scrollbar */
+}
   
 
   
@@ -125,6 +130,7 @@ li:hover {
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px;
     margin:10px;
+    overflow: auto;
 }
 
 .smallGridItem {
@@ -135,5 +141,6 @@ li:hover {
     padding: 50px;
     
 }
+
 
 
