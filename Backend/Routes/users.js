@@ -72,7 +72,10 @@ router.get("/logout", (req, res) => {
 });
 
 router.get("/", function (req, res) {
-  res.render("Users Route", {});
+  const sql = "SELECT * FROM UsersInfo";
+  dbConnection.query(sql, (err, result) => {
+    if (err) return res.json({ Status: false });
+    return res.json(result);
 });
 
 module.exports = router;
