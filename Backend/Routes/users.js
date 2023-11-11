@@ -1,10 +1,13 @@
 const express = require("express");
+const cors = require("cors");
 const cookieParser = require("cookie-parser");
 const dbConnection = require("../utils/database");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
 
 const router = express.Router();
+router.use(express.urlencoded({ extended: true }));
+router.use(cors());
 
 // This API add a new record into UsersInfo table with the hashed password
 router.post("/signup", (req, res) => {
@@ -71,7 +74,7 @@ router.get("/logout", (req, res) => {
   return res.json({ Status: true });
 });
 
-router.get("/", function (req, res) {
+router.get("/", async function (req, res) {
   const sql = "SELECT * FROM UsersInfo";
   dbConnection.query(sql, (err, result) => {
     if (err) return res.json({ Status: false });
