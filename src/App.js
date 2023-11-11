@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 //import graphic from './sample.jpg'
-import graphic from './graphic.png'
+import graphic from './graphic.png';
 import './App.css';
 import './KFstyle.css';
 import Home from './home';
