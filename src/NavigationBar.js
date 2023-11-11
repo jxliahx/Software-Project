@@ -15,11 +15,11 @@ const NavigationBar = () => {
   };
 
   const navigationLinks = [
-    { label: 'Home', url: '/home' },
+    { label: 'Home', url: '/Landing' },
     { label: 'Create Projects', url: '/about' },
     { label: 'Invitations', url: '/Invitation' },
     { label: 'Calendar', url: '/Calendar' },
-    { label: 'Signout', url: '/contact' },
+    { label: 'Signout', url: '/home' },
   ];
 
   return (
