@@ -34,7 +34,7 @@ export default function Login() {
                   <Icon class="absolute mr-10" icon={icon} size={20}/>
               </span>
               {errors.pwd && <error>{errors.pwd.message}</error>}
-                <button class="lb"><Link to="/Landing">Login</Link></button>
+              <Link to="/Landing"><button type="submit" class="lb">Login</button></Link>
                 <p class="nm">Not a member?<Link to="/signup">Sign Up Here</Link></p>
             </form>
         </div>
