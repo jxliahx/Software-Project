@@ -47,6 +47,12 @@ function App() {
       <Route path="/signup">
           < Signup />
         </Route>
+      <Route path="/task">
+        < Task/>
+      </Route>
+      <Route path="/taskApproval">
+        < TaskApproval />
+      </Route>
     </Switch>
     </div>
     </Router>
