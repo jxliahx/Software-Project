@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import {BiMailSend} from "react-icons/bi";
 
 function SenderForm() {
   const [username, setUsername] = useState('');
@@ -51,7 +52,7 @@ function SenderForm() {
               <option value="Project3">Project3</option>
             </select>
           </div>
-          <button type="submit">Send Invitation</button>
+          <button type="submit"><BiMailSend /></button>
         </form>
       )}
     </div>

@@ -10,6 +10,7 @@ function App() {
       <NavigationBar /> 
       <SenderForm />
       <ReceiverForm />
+      <TaskInvitation />
     </div>
   );
 }
