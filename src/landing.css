@@ -1,97 +1,3 @@
-/*.Grid{
-    background-color: #d0bdf4;
-    display: grid;
-    width: 100%;
-    height: 250px;
-    width: 100%;
-    height: 250px;
-    grid-template-columns: 1fr 1.5fr 1fr;
-    grid-template-rows: 150px auto 100px;
-    box-sizing: border-box;
-    gap: 5px;
-    grid-auto-flow: row;
-    grid-template-areas:
-      "nav header header"
-      "nav cont1 cont2"
-      "nav footer footer";
-    grid-template-columns:100px 100px 100px;
-}
-
-
-  
-.nav { 
-    grid-column: 1;
-    grid-row: 1/3 span;
-}
-  
-.header { 
-    grid-column: 1/3 span;
-    grid-row: 1; 
-}
-
-  
-.cont1 { 
-    grid-column: 1;
-    grid-row: 2; 
-}
-  
-.cont2 { 
-    grid-column: 2;
-    grid-row: 2; 
-}
-  
-
-.userText{
-    color: #8458B3; 
-    font-size: large;
-    align-items: right;
-    font-family: "Poppins", bold; 
-
-}
-
-.Title {
-    color: #8458B3;
-    font-size: 24pt;
-    align-items: middle;
-    margin-left: 20px;
-    font-family: "Poppins", extrabold;
-}
-  
-
-.Container{
-    background-color: #8458B3;
-    display: flex;
-    flex-direction: column;
-    justify-content:flex-start;
-
-
-}
-  
-
-  
-.Slogan {
-    color: #8458B3;
-    font-size: 56pt;
-    align-items: start;
-    margin-left: 50px;
-    font-family: "Poppins", extrabold;
-    margin-top: 100px;
-} */
-  
-
-  
-  /* Ice Cold: #a0d2eb
-  
-  Freeze Purple: #e5eaf5
-  
-  Medium Purple: #d0bdf4
-  
-  Purple Pain: #8458B3
-  
-  Heavy Purple: #494d5f */
-  
-  /*test*/
-
 :root {
     --main-radius: 30px;
     --main-padding: 20px;
@@ -163,7 +69,7 @@ body {
     border-color: #e5eaf5;  
     border-radius: var(--main-radius);
     padding-top: var(--main-padding);
-  }
+}
   
 .content3 {
     background: #8458b3;
@@ -183,28 +89,24 @@ body {
     padding-top: var(--main-padding);
   }
 
-  section{
+.sectionContent{
     font-size: 28px;
     text-align: left;
     margin-top: -1.0em;
     color:  #d0bdf4;
     margin-bottom: 10%;
-
- 
-
-  
-   
-
-  }
-  .list{
+}
+.list{
     list-style-type: circle;
     
-  }
-  li{
-    font-size: 22px; 
-  }
+}
 
-  li:hover {
+
+.liFont{
+    font-size: 22px; 
+}
+
+.liFont:hover {
     background-color: #494d5f; /* Background color on hover */
     color: #a0d2eb;
-  }
+}

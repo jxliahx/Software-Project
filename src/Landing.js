@@ -16,9 +16,9 @@ function Landing() {
 
        <div className = 'main'> Upcoming Deadlines
        <ul className='list'>
-       <section> 
-        <li>Project1</li>
-        <li>Project2</li>
+       <section className='sectionContent'> 
+        <li className='liFont'>Project1</li>
+        <li className='liFont'>Project2</li>
         </section>
         </ul>
        </div>
@@ -26,16 +26,16 @@ function Landing() {
        <div className='content1'> Current Projects 
       
        <ul className='list'>
-       <section> My Projects:
-        <li>Project1</li>
-        <li>Project2</li>
+       <section className='sectionContent'> My Projects:
+        <li className='liFont'>Project1</li>
+        <li className='liFont'>Project2</li>
         </section>
         </ul>
 
         <ul className='list'>
-       <section> Shared With Me:
-        <li>Project3</li>
-        <li>Project4</li>
+       <section className='sectionContent'> Shared With Me:
+        <li className='liFont'>Project3</li>
+        <li className='liFont'>Project4</li>
         </section>
         </ul>
        </div>
