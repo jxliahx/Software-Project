@@ -15,16 +15,19 @@ export default function Login() {
     watch,
   } = useForm();
   const history = useHistory();
-  axios.defaults.withCredentials = true;
+  //axios.defaults.withCredentials = true;
   const onSubmit = (data) => {
     console.log(data);
     axios
       .post("http://localhost:5000/api/users/login", data)
       .then((result) => {
-        if (result.data.Status) {
+        console.log(result.data);
+
+        if (result.data.loginStatus) {
+          localStorage.setItem("id", result.data.id);
           history.push("/landing");
         } else {
-          alert("Login failed");
+          alert(result.data.Error);
         }
       })
       .catch((err) => console.log(err));
