@@ -26,9 +26,9 @@ export default function Login() {
             <h1 class="wb">Welcome Back!</h1>
             <form class="loginBox" onSubmit={handleSubmit(onSubmit)}>
                 <p>Username:</p>
-                <input class="Kinput" {...register("uname", { required: true,})} style={errors.uname && { border: "2px solid red" }}/>
+                <input  {...register("uname", { required: true,})} style={errors.uname && { border: "2px solid red" }}/>
                 <p>Password:</p>
-                <input class="Kinput" type={type} {...register("pwd", { required: true,  minLength: {
+                <input type={type} {...register("pwd", { required: true,  minLength: {
         value: 8,
         message: "Password is less than 8 characters"}})}style={errors.pwd && { border: "2px solid red" }}/>
                 <span class="flex justify-around items-center" onClick={handleToggle}>

@@ -96,7 +96,8 @@ a {
 }
 
 .signupBox {
-   margin-left: 475px;
+   margin-left: auto;
+   margin-right: auto;
    width: 400px;
    background-color: #d0bdf4;
     background-position: fixed;
@@ -128,7 +129,8 @@ a {
 }
 
 .loginBox {
-    margin-left: 455px;
+    margin-left: auto;
+    margin-right: auto;
     width: 400px;
     background-color: #d0bdf4;
     background-position: fixed;
@@ -146,7 +148,7 @@ a {
     cursor: default;
 }
 
-.Kinput {
+input {
     width: 300px;
     height: 40px;
     background-color: #e5eaf5;
@@ -154,10 +156,11 @@ a {
     border-radius: 10px;
     padding-left: 15px;
     font-size: 15px;
+    margin-right: 200px;
     margin-top: -20px;
 }
 
-.Kinput:focus {
+input:focus {
     outline: none;
 }
 
@@ -178,8 +181,10 @@ error {
 
 span {
     color: #8458b3;
-    padding-left: 5px;
     cursor: pointer;
+    float: right;
+    margin-top: -30px;
+    margin-right: 40px;
 }
 
 .Container2 {
