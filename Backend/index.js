@@ -12,6 +12,7 @@ app.use(
     origin: [
       "https://cs476-StudentGroupPM-backend.onrender.com",
       "http://localhost:5000",
+      "http://localhost:3000",
     ],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
