@@ -13,6 +13,7 @@ import axios from 'axios';
 export default function Signup() {
     const { register, formState: { errors }, handleSubmit, watch} = useForm();
     const history = useHistory();
+    axios.defaults.withCredentials = true;
     const onSubmit = (data) => {
       console.log(data);
       axios
