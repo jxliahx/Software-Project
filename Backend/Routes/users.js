@@ -61,9 +61,9 @@ router.post("/login", (req, res) => {
 });
 
 // This API returns details of a single user. Example: https://cs476-StudentGroupPM-backend.onrender.com/api/users/detail/tungngo
-router.get("/detail/:username", (req, res) => {
-  const sql = "SELECT * FROM UsersInfo where Username = ?";
-  dbConnection.query(sql, [req.params.username], (err, result) => {
+router.get("/detail/:id", (req, res) => {
+  const sql = "SELECT * FROM UsersInfo where UserID = ?";
+  dbConnection.query(sql, [req.params.id], (err, result) => {
     if (err) return res.json({ Status: false });
     return res.json(result);
   });
