@@ -11,6 +11,7 @@ import Invitation from './Invitation';
 import Landing from './Landing';
 import ProjectUser from './ProjectUser'; 
 import ProjectAdmin from './ProjectAdmin'; 
+import CreatePage from './createPage';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFolderOpen } from '@fortawesome/free-solid-svg-icons'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
@@ -44,11 +45,14 @@ function App() {
       <Route path='/Landing'>
         <Landing/>
       </Route>
-      <Route path='/projectUser'>
+      <Route path='/ProjectUser'>
         <ProjectUser/>
       </Route>
-      <Route path='/projectAdmin'>
+      <Route path='/ProjectAdmin'>
         <ProjectAdmin/>
+      </Route>
+      <Route path='/createPage'>
+        <CreatePage/>
       </Route>
     </Switch>
     </div>
