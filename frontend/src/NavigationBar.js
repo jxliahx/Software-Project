@@ -18,7 +18,7 @@ const NavigationBar = () => {
 
   const navigationLinks = [
     { label: "Home", url: "/home" },
-    { label: "Create Projects", url: "/about" },
+    { label: "Create Projects", url: "/createProject" },
     { label: "Invitations", url: "/Invitation" },
     { label: "Calendar", url: "/Calendar" },
     { label: "Signout", url: "/logout" },
