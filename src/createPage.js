@@ -1,8 +1,8 @@
 import {React, useState} from 'react'
 import './createPage.css';
-import {SearchBar} from "../components/searchBar"
-import {SearchResultsList} from "../components/searchResultsList"
-import TaskModalPortal from "../components/taskModalPortal"
+import {SearchBar} from "./components/searchBar"
+import {SearchResultsList} from "./components/searchResultsList"
+import TaskModalPortal from "./components/taskModalPortal"
 
 // const Button = styled.button `
 //     color: #e5eaf5;
