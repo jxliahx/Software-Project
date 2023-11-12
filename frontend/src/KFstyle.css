@@ -4,7 +4,7 @@ body{
     margin: 0;
 }
 
-.Container {
+.ContainerK {
     /* flex-direction: row;
     display: flex;
     justify-content:flex-start;
@@ -14,7 +14,7 @@ body{
     position: fixed;
     width: 100%;
     overflow: hidden;
-    /*background: url("graphic.png");*/
+    background: url("graphic.png");
     background-position: center top;
     background-size: 1150px;
     margin: 0;
