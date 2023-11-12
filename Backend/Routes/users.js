@@ -83,4 +83,18 @@ router.get("/", function (req, res) {
   });
 });
 
+// This API search all projects that current user is a member of.
+router.get("/memberof", (req, res) => {
+  const sql = `SELECT * FROM Projects WHERE ProjectID IN 
+  (SELECT ProjectID FROM ProjectMembers WHERE UserID = ?)`;
+  const cookie = req.headers.cookie;
+  const payload = cookie.split(".")[1];
+  const decodedValue = JSON.parse(atob(payload));
+  const value = decodedValue.id;
+  dbConnection.query(sql, value, (err, result) => {
+    if (err) return res.json({ Status: false, Error: err });
+    return res.json(result);
+  });
+});
+
 module.exports = router;
