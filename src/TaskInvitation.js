@@ -31,8 +31,8 @@ function TaskForm() {
           <p><div className='icon'>< BsListTask /></div>
             You've been assigned to XXXXX task.
           <div className="button-container">
-            <button onClick={handleAcceptInvitation}>< AiOutlineCheckCircle /></button> 
-            <button onClick={handleDeclineInvitation} className="decline-button"> < MdOutlineCancel /></button>
+            <button class="inviteButton" onClick={handleAcceptInvitation}>< AiOutlineCheckCircle /></button> 
+            <button class="inviteButton" onClick={handleDeclineInvitation} className="decline-button"> < MdOutlineCancel /></button>
           </div>
           </p>
         </div>
