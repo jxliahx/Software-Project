@@ -84,15 +84,7 @@ function CreatePage () {
     const openModal = () => setShowModal(true);
     const closeModal = () => setShowModal(false);
 
-    // const [isOpen, setIsOpen] = useState(false);
 
-    // const openModal = () => {
-    //     setIsOpen(true);
-    //   };
-    
-    //   const closeModal = () => {
-    //     setIsOpen(false);
-    //   };
 
     return (
         <div>
