@@ -12,9 +12,10 @@ import Calendar1 from './Calendar';
 import Invitation from './Invitation';
 import Landing from './Landing';
 import Logout from "./logout";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFolderOpen } from '@fortawesome/free-solid-svg-icons'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import CreateProject from "./createProject";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFolderOpen } from "@fortawesome/free-solid-svg-icons";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 // function App() {
 //   return (
@@ -44,6 +45,9 @@ function App() {
         <Switch>
           <Route exact path="/">
             <Home />
+          </Route>
+          <Route exact path="/createProject">
+            <CreateProject />
           </Route>
           <Route path="/login">
             <Login />

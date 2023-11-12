@@ -1,8 +1,9 @@
 import {React, useState} from 'react'
-import './createPage.css';
-import {SearchBar} from "../components/searchBar"
-import {SearchResultsList} from "../components/searchResultsList"
-import TaskModalPortal from "../components/taskModalPortal"
+import "./createProject.css";
+import { SearchBar } from "./Components/searchBar";
+import { SearchResultsList } from "./Components/searchResultsList";
+import TaskModalPortal from "./Components/taskModalPortal";
+import Modal from "./Components/taskModal";
 
 // const Button = styled.button `
 //     color: #e5eaf5;
@@ -52,113 +53,89 @@ import TaskModalPortal from "../components/taskModalPortal"
     )
 }*/
 
+function CreateProject() {
+  const [tasks] = useState([
+    {
+      title: "Task1",
+    },
+    {
+      title: "Task2",
+    },
+    {
+      title: "Task3",
+    },
+    {
+      title: "Task4",
+    },
+    {
+      title: "Task5",
+    },
+    {
+      title: "Task6",
+    },
+  ]);
 
-function CreatePage () {
+  const [results, setResults] = useState([]);
 
-    const [tasks] = useState([
-        {
-            title: 'Task1',
-        },
-        {
-            title: 'Task2',
-        },
-        {
-            title: 'Task3',
-        },
-        {
-            title: 'Task4',
-        },
-        {
-            title: 'Task5',
-        },
-        {
-            title: 'Task6',
-        },
+  const [showModal, setShowModal] = useState(false);
 
-    ])
+  const openModal = () => setShowModal(true);
+  const closeModal = () => setShowModal(false);
 
-    const [results, setResults] = useState([]);
+  // const [isOpen, setIsOpen] = useState(false);
 
-    const [showModal, setShowModal] = useState(false);
+  // const openModal = () => {
+  //     setIsOpen(true);
+  //   };
 
-    const openModal = () => setShowModal(true);
-    const closeModal = () => setShowModal(false);
+  //   const closeModal = () => {
+  //     setIsOpen(false);
+  //   };
 
-    // const [isOpen, setIsOpen] = useState(false);
+  return (
+    <div>
+      <div className="TitleContainer">
+        <header className="Title">Create a Project</header>
+      </div>
+      <div>
+        <TaskModalPortal
+          visible={showModal}
+          title="Portal Modal"
+          description="I was rendered usign portals"
+          onClose={closeModal}
+        />
+        {/* <button onClick={openModal}>Show Modal</button> */}
+      </div>
+      <div className="BigBox">
+        <div className="Container">
+          <div className="Tasks">
+            {tasks.map((task, i) => (
+              <div key={i} className="Task">
+                <header className="TaskTitle">{task.title}</header>
+                <p></p>
+                <button className="TaskButton" onClick={openModal}>
+                  +
+                </button>
 
-    // const openModal = () => {
-    //     setIsOpen(true);
-    //   };
-    
-    //   const closeModal = () => {
-    //     setIsOpen(false);
-    //   };
-
-    return (
-        <div>
-            <div className="TitleContainer">
-                <header className='Title'>
-                    Create a Project
-                </header>
-            
-            </div>
-            <div>
-                    <TaskModalPortal
-                        visible={showModal}
-                        title="Portal Modal"
-                        description="I was rendered usign portals"
-                        onClose={closeModal}
-                    />
-                                    {/* <button onClick={openModal}>Show Modal</button> */}
-                    </div>
-            <div className="BigBox">
-                <div className="Container">
-                    <div className="Tasks">
-                        {
-                            tasks.map((task, i) => (
-                                <div key={i} className="Task">
-                                    <header className="TaskTitle">
-                                        {task.title}
-                                    </header>
-                                    <p>
-                                    
-                                    </p>
-                                    <button 
-                                        className='TaskButton'
-                                        onClick={openModal}>
-                                        +
-                                    </button>
-
-                                    {/*{isOpen && (
+                {/*{isOpen && (
                                         <Modal onClose={closeModal} />
                                     )} */}
-                                    
-                                </div>
-                                
-                            ))
-                        }
-
-                    </div>
-
-                </div>
-                <div className="MemberContainer">
-                    <header className="AddTitle">
-                        Add members
-                    </header>
-                    <div>
-                        <SearchBar setResults={setResults}/>
-                        {results && results.length > 0 
-                        && <SearchResultsList results={results} />}
-                    </div>
-
-                </div>
-            
+              </div>
+            ))}
+          </div>
         </div>
-
-
+        <div className="MemberContainer">
+          <header className="AddTitle">Add members</header>
+          <div>
+            <SearchBar setResults={setResults} />
+            {results && results.length > 0 && (
+              <SearchResultsList results={results} />
+            )}
+          </div>
+        </div>
+      </div>
     </div>
-
-    )
+  );
 }
 
-export default CreatePage
+export default CreateProject;
