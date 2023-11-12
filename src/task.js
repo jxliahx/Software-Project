@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useDropzone } from 'react-dropzone';
+import './KFstyle.css';
 export default function Task() {
   const [uploadedFiles, setUploadedFiles] = useState([]);
   const { getRootProps, getInputProps } = useDropzone({

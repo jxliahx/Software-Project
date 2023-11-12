@@ -1,6 +1,7 @@
 /*import CheckIcon from '@mui/icons-material/Check';*/
 /*import CloseIcon from '@mui/icons-material/Close';*/
 import React, { useState } from 'react';
+import './KFstyle.css';
 export default function TaskApproval(){
 
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
