@@ -10,7 +10,7 @@ const secret = process.env.SECRET;
 
 const router = express.Router();
 router.use(express.urlencoded({ extended: true }));
-router.use(cors());
+//router.use(cors());
 
 /*router.all("/", function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
@@ -78,9 +78,9 @@ router.get("/detail/:username", (req, res) => {
 });
 
 // This API delete the cookie when user logout
-router.get("/logout", (req, res) => {
-  res.clearCookie("token");
-  return res.json({ Status: true });
+router.post("/logout", (req, res) => {
+  res.clearCookie("token", path("/"));
+  return res.status(200).redirect("/");
 });
 
 router.get("/", function (req, res) {

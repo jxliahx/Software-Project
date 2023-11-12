@@ -5,7 +5,7 @@ import { useHistory } from "react-router-dom";
 export default function Home() {
   const history = useHistory();
 
-  if (localStorage.getItem("id") && document.cookie) {
+  if (document.cookie) {
     history.push("/landing");
   }
   return (

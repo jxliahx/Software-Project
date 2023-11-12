@@ -15,7 +15,7 @@ export default function Login() {
     watch,
   } = useForm();
   const history = useHistory();
-  //axios.defaults.withCredentials = true;
+  axios.defaults.withCredentials = true;
   const onSubmit = (data) => {
     console.log(data);
     axios

@@ -42,7 +42,7 @@ function App() {
     <Router>
       <div className="App">
         <Switch>
-          <Route exact path="/home">
+          <Route exact path="/">
             <Home />
           </Route>
           <Route path="/login">

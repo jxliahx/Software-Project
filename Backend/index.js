@@ -13,6 +13,7 @@ app.use(
       "https://cs476-StudentGroupPM-backend.onrender.com",
       "http://localhost:5000",
       "http://localhost:3000",
+      "http://localhost",
     ],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
