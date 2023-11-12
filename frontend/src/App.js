@@ -11,6 +11,7 @@ import Task from './task';
 import Calendar1 from './Calendar';
 import Invitation from './Invitation';
 import Landing from './Landing';
+import Logout from "./logout";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFolderOpen } from '@fortawesome/free-solid-svg-icons'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
@@ -39,41 +40,44 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 function App() {
   return (
     <Router>
-    <div className='App'>
-      <Switch>
-      <Route exact path="/home">
-        <Home/>
-      </Route>
-      <Route path="/login">
-          < Login />
-        </Route>
-      <Route path="/signup">
-          < Signup />
-        </Route>
-      <Route path="/task">
-        < Task/>
-      </Route>
-      <Route path="/taskApproval">
-        < TaskApproval />
-      </Route>
-      <Route path="/Invitation">
-        <Invitation/>
-      </Route>
-      <Route path='/Calendar'>
-        <Calendar1/>
-      </Route>
-      <Route path='/Landing'>
-        <Landing/>
-      </Route>
-    </Switch>
-    </div>
+      <div className="App">
+        <Switch>
+          <Route exact path="/home">
+            <Home />
+          </Route>
+          <Route path="/login">
+            <Login />
+          </Route>
+          <Route path="/logout">
+            <Logout />
+          </Route>
+          <Route path="/signup">
+            <Signup />
+          </Route>
+          <Route path="/task">
+            <Task />
+          </Route>
+          <Route path="/taskApproval">
+            <TaskApproval />
+          </Route>
+          <Route path="/Invitation">
+            <Invitation />
+          </Route>
+          <Route path="/Calendar">
+            <Calendar1 />
+          </Route>
+          <Route path="/Landing">
+            <Landing />
+          </Route>
+        </Switch>
+      </div>
     </Router>
 
     // move this code into homepage.js
-    // <div className='TitleContainer'> 
+    // <div className='TitleContainer'>
     //   <div >
     //   <header className='Title'>Student Group Project Manager</header>
-      
+
     //   {/* <FontAwesomeIcon icon={faFolderOpen} /> */}
     // </div>
     // <div className='Container'>
@@ -84,12 +88,11 @@ function App() {
     //   </div>
 
     // <div className='Container'>
-      
-    // </div>
-      
-    // </div>
+
     // </div>
 
+    // </div>
+    // </div>
   );
 }
 
