@@ -17,7 +17,7 @@ const TaskModalPortal = ({ visible, onClose }) => {
           <textarea 
                 className='TitleText'
                 name="projectTitle"
-                placeholder={"Add a Project Title"}
+                placeholder={"Add a Task Title"}
                 rows={1}
             />
           </header>
