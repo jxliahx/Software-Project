@@ -7,81 +7,89 @@ body {
     font-family: "Poppins", bold;
 }
   
-.container {
-    background-image: url("clouds.png");
+.container1 {
+    background-color:#d0bdf4;
     display: grid;
     height: 100vh;
     grid-template-columns: 1.0fr 1.0fr 1fr 1fr;
     grid-template-rows: 0.3fr 1.5fr 1.2fr;
     grid-template-areas:
-      "nav nav nav nav"
-      "content1 main main content2"
-      "content1 main main content3";
-    grid-gap: 0.8rem;
+      "nav1 nav1 nav1 nav1"
+      "content1a main1 main1 content2a"
+      "content1a main1 main1 content3a";
+    grid-gap: 10px;
     font-weight: 800;
     font-size: 40px;
-    color:  #494d5f;
+    color:  #8458b3;
     text-align: center;
+    
 }
 
-.nav {
-    grid-area: nav;
+
+.nav1 {
+    grid-area: nav1;
     text-align: center;
     font-size: 40px;
+    margin: 20px;
   }
   
-.main {
-    background-color:#b7a4b4da;
-   
-    grid-area: main;
+.main1 {
+    background-color:#e5eaf5;
+    grid-area: main1;
     border-radius: var(--main-radius);
     padding-top: var(--main-padding);
+    border: 3px solid #8458b3;
     border-style: dashed;
-    border-width: 5px;
-    border-color:#727088;
+    margin: 20px;
+    overflow:auto;
   }
+
+.main1::-webkit-scrollbar {
+    width: 12px; /* Set the width of the scrollbar */
+}
   
 
   
-.content1 {
+.content1a {
   
-    grid-area: content1;
+    grid-area: content1a;
     border-radius: var(--main-radius);
     padding-top: var(--main-padding);
+    margin: 20px;
+    
     
 }
   
-.content2 {
-    grid-area: content2;
+.content2a {
+    grid-area: content2a;
+    border: 3px solid #8458b3;
     border-style: dashed; 
-    border-width: 5px;
-    border-color: #727088; 
-    background-color:#b7a4b4da;
+    background-color:#e5eaf5;
     font-size: 30px;
     border-radius: var(--main-radius);
     padding-top: var(--main-padding);
+    margin: 20px;
   }
   
-.content3 {
-    grid-area: content3;
-    border-style: dashed; 
-    border-width: 5px;
-    border-color:#727088;
-    background-color:#b7a4b4da;
+.content3a {
+    grid-area: content3a;
+    border: 3px solid #8458b3;
+    border-style: dashed;
+    background-color:#e5eaf5;
     font-size: 30px;
     border-radius: var(--main-radius);
     padding-top: var(--main-padding);
+    margin: 20px;
   }
   
 
 
-  section{
+.sectionClassA{
     font-size: 28px;
     text-align: left;
+    border: 3px solid #8458b3;
     border-style: dashed;
-    border-width: 5px;
-    border-color:#727088;
-    background-color:#b7a4b4da;
+    background-color:#e5eaf5;
     margin-bottom: 5%; 
     border-radius: var(--main-radius);
 
@@ -91,16 +99,17 @@ body {
     list-style-type: circle;
     
 }
-ul{
+.ulClassA{
     margin-top: 5%; 
 }
-li{
+
+.liFont1{
     text-align: left;
     list-style-type: none; 
     font-size: 22px; 
 }
 
-li:hover {
+.liFont1:hover {
     background-color: #494d5f; /* Background color on hover */
     color: #a0d2eb;
 }
@@ -113,7 +122,23 @@ li:hover {
     grid-template-columns: 200px 200px; 
     border-radius: var(--main-radius);
     box-sizing: border-box;
-
     margin-left: 10px;
 
+}
+
+.smallGridContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    margin:10px;
+    overflow: auto;
+}
+
+.smallGridItem {
+    border: 3px solid #8458b3;
+    background-color: #e5eaf5;
+    font-size: 18px;
+    border-radius: 15px;
+    padding: 50px;
+    
 }
