@@ -14,7 +14,7 @@ export default function Home(){
       <img className = 'Graphic' src={graphic} />
       <div className='Slogan'>
         organize <br /> collaborate <br /> create <br />
-    <button className='Button' ><Link to="/signup">Sign up now!</Link></button>
+        <Link to="/signup"><button className='Button' >Sign up now!</button></Link>
        </div>
 
      <div className='Container'>
