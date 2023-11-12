@@ -2,7 +2,7 @@ import React from 'react';
 import './projectUser.css';
 import NavigationBar from './NavigationBar';
 import './NavigationBar.css';
- 
+import { Link } from 'react-router-dom';
 
 
 function ProjectUser() {
@@ -28,28 +28,33 @@ function ProjectUser() {
         <div class="main1">
     <div class="title">Current Tasks</div>
     <div class="smallGridContainer">
-        <div class="smallGridItem">
+       <Link to="/task"><div class="smallGridItem">
           <div className='title'>Item 1</div> 
           <p>Assigned to:</p>
           <p>Due date:</p>
           </div>
+          </Link>
+          <Link to="/task">
         <div class="smallGridItem">
         <div className='title'>Item 2</div> 
           <p>Assigned to:</p>
           <p>Due date:</p>
           </div>
+          </Link> 
+          <Link to="/task">
           <div class="smallGridItem">
           <div className='title'>Item 3</div> 
           <p>Assigned to:</p>
           <p>due date:</p>
           </div>
+          </Link>
     </div>
 </div>
 
         <div className='content2a'>Awaiting Approval
         <ul className='ulClassA'>
-        <li className='liFont1'>TaskA</li>
-        <li className='liFont1'>TaskB</li>
+        <Link to="/taskApproval"><li className='liFont1'>TaskA</li></Link>
+        <Link to="/taskApproval"><li className='liFont1'>TaskB</li></Link>
         </ul>
         </div>
 

@@ -45,10 +45,10 @@ function App() {
       <Route path='/Landing'>
         <Landing/>
       </Route>
-      <Route path='/projectUser'>
+      <Route path='/ProjectUser'>
         <ProjectUser/>
       </Route>
-      <Route path='/projectAdmin'>
+      <Route path='/ProjectAdmin'>
         <ProjectAdmin/>
       </Route>
       <Route path='/createPage'>
