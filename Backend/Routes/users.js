@@ -12,6 +12,12 @@ const router = express.Router();
 router.use(express.urlencoded({ extended: true }));
 router.use(cors());
 
+app.all("/", function (req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "X-Requested-With");
+  next();
+});
+
 // This API add a new record into UsersInfo table with the hashed password
 router.post("/signup", (req, res) => {
   const sql = `INSERT INTO UsersInfo 
