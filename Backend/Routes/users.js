@@ -1,5 +1,4 @@
 const express = require("express");
-const cors = require("cors");
 const dotenv = require("dotenv").config();
 const cookieParser = require("cookie-parser");
 const dbConnection = require("../utils/database");
@@ -10,13 +9,6 @@ const secret = process.env.SECRET;
 
 const router = express.Router();
 router.use(express.urlencoded({ extended: true }));
-//router.use(cors());
-
-/*router.all("/", function (req, res, next) {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Headers", "X-Requested-With");
-  next();
-});*/
 
 // This API add a new record into UsersInfo table with the hashed password
 router.post("/signup", (req, res) => {
@@ -78,9 +70,9 @@ router.get("/detail/:username", (req, res) => {
 });
 
 // This API delete the cookie when user logout
-router.post("/logout", (req, res) => {
-  res.clearCookie("token", path("/"));
-  return res.status(200).redirect("/");
+router.get("/logout", (req, res) => {
+  res.clearCookie("token");
+  return res.json({ Status: true });
 });
 
 router.get("/", function (req, res) {
@@ -92,5 +84,3 @@ router.get("/", function (req, res) {
 });
 
 module.exports = router;
-
-
