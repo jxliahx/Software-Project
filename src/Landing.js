@@ -1,6 +1,7 @@
 import React from 'react';
 import './landing.css';
 import NavigationBar from './NavigationBar'; /* Add this at the top of your app.js file*/
+import {Link} from 'react-router-dom';
 
 function Landing() {
     return (
@@ -27,15 +28,15 @@ function Landing() {
       
        <ul className='list'>
        <section className='sectionContent'> My Projects:
-        <li className='liFont'>Project1</li>
-        <li className='liFont'>Project2</li>
+        <Link to="/ProjectAdmin"><li className='liFont'>Project1</li></Link>
+        <Link to="/ProjectAdmin"><li className='liFont'>Project2</li></Link>
         </section>
         </ul>
 
         <ul className='list'>
        <section className='sectionContent'> Shared With Me:
-        <li className='liFont'>Project3</li>
-        <li className='liFont'>Project4</li>
+       <Link to="/ProjectUser"><li className='liFont'>Project3</li></Link>
+       <Link to="/ProjectUser"><li className='liFont'>Project4</li></Link>
         </section>
         </ul>
        </div>
