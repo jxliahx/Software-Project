@@ -12,6 +12,23 @@
     font-family: "Poppins", extrabold;
   }
   
+  /*
+  .Container {
+     flex-direction: row;
+    display: flex;
+    justify-content:flex-start;
+    background-color: #d0bdf4;
+    min-height: 100vh; 
+    background-color: #d0bdf4;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+     align-items: center; 
+    justify-content:flex-start;
+     font-size: calc(10px + 2vmin); 
+  }
+  */
+
   .Graphic {
     /* width: 700px;
     margin-left: 50px; */
@@ -81,7 +98,7 @@
     color: #8458B3;
   }
 
-  .ContainerJ {
+  .Container {
     max-width: calc(100% - 500px);
     width: 100%;
 
@@ -101,14 +118,14 @@
     justify-content:center;
   }
 
-  /*section {
+  section {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-  }*/
+  }
 
-  .TasksJ {
+  .Tasks {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -146,7 +163,7 @@
     margin-bottom: 20px;
   }
 
-  .TaskJ {
+  .Task {
     
     max-width: calc(33.33% - 20px);
     width: 100%;

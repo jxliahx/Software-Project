@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import {Link} from 'react-router-dom';
+import { useHistory } from "react-router-dom";
+import axios from "axios";
 
 const NavigationBar = () => {
+  const history = useHistory();
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const toggleDropdown = () => {
@@ -9,17 +12,16 @@ const NavigationBar = () => {
   };
 
   const handleNavigation = (url) => {
-    // Add logic here to navigate to the selected page (e.g., using React Router)
     console.log(`Navigating to: ${url}`);
     // You can use a router like React Router to handle the navigation.
   };
 
   const navigationLinks = [
-    { label: 'Home', url: '/Landing' },
-    { label: 'Create Projects', url: '/createPage' },
-    { label: 'Invitations', url: '/Invitation' },
-    { label: 'Calendar', url: '/Calendar' },
-    { label: 'Signout', url: '/home' },
+    { label: "Home", url: "/" },
+    { label: "Create Projects", url: "/createProject" },
+    { label: "Invitations", url: "/Invitation" },
+    { label: "Calendar", url: "/Calendar" },
+    { label: "Signout", url: "/logout" },
   ];
 
   return (

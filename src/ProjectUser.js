@@ -1,79 +1,45 @@
 import React from 'react';
 import './projectUser.css';
-import NavigationBar from './NavigationBar';
-import './NavigationBar.css';
-import { Link } from 'react-router-dom';
+ 
 
 
 function ProjectUser() {
+  const searchParams = new URLSearchParams(window.location.search);
+  const projectID = searchParams.get("projectID");
+  const projectName = searchParams.get("projectName");
     return (
-     <div className='container1'>
-      
-      <NavigationBar />
-     
-      
-      <div className='nav1'> Example Project 
-      
-       </div>
+      <div className="container">
+        <div className="nav"> Project: {projectName}</div>
 
-       <div className = 'content1a'> Members
-       <section className='sectionClassA'> 
-       <ul className='ulClassA'>
-        <li className='liFont1'>Member1</li>
-        <li className='liFont1'>Member2</li>
-        </ul>
-        </section>
+        <div className="content1">
+          {" "}
+          Members
+          <section>
+            <ul>
+              <li>Member1</li>
+              <li>Member2</li>
+            </ul>
+          </section>
         </div>
 
-        <div class="main1">
-    <div class="title">Current Tasks</div>
-    <div class="smallGridContainer">
-       <Link to="/task"><div class="smallGridItem">
-          <div className='title'>Item 1</div> 
-          <p>Assigned to:</p>
-          <p>Due date:</p>
-          </div>
-          </Link>
-          <Link to="/task">
-        <div class="smallGridItem">
-        <div className='title'>Item 2</div> 
-          <p>Assigned to:</p>
-          <p>Due date:</p>
-          </div>
-          </Link> 
-          <Link to="/task">
-          <div class="smallGridItem">
-          <div className='title'>Item 3</div> 
-          <p>Assigned to:</p>
-          <p>due date:</p>
-          </div>
-          </Link>
-    </div>
-</div>
+        <div className="main">Current Tasks</div>
 
-        <div className='content2a'>Awaiting Approval
-        <ul className='ulClassA'>
-        <Link to="/taskApproval"><li className='liFont1'>TaskA</li></Link>
-        <Link to="/taskApproval"><li className='liFont1'>TaskB</li></Link>
-        </ul>
+        <div className="content2">
+          Awaiting Approval
+          <ul>
+            <li>TaskA</li>
+            <li>TaskB</li>
+          </ul>
         </div>
 
-        <div className='content3a'>Completed Tasks
-        <ul className='ulClassA'>
-        <li className='liFont1'>TaskC</li>
-        <li className='liFont1'>TaskD</li>
-        </ul>
+        <div className="content3">
+          Completed Tasks
+          <ul>
+            <li>TaskC</li>
+            <li>TaskD</li>
+          </ul>
         </div>
-      
-
-     
-    
-      
-
-
-       
-
-     </div>
+      </div>
     );
   }
   export default ProjectUser;

@@ -94,15 +94,15 @@ function CreatePage () {
                 </header>
             
             </div>
-            {/* <div>
+            <div>
                     <TaskModalPortal
                         visible={showModal}
                         title="Portal Modal"
                         description="I was rendered usign portals"
                         onClose={closeModal}
                     />
-
-                    </div> */}
+                                    {/* <button onClick={openModal}>Show Modal</button> */}
+                    </div>
             <div className="BigBox">
                 <div className="ContainerJ">
                     <div className="TasksJ">

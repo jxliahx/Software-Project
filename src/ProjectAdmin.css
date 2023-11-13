@@ -1,39 +1,31 @@
 :root {
     --main-radius: 30px;
     --main-padding: 20px;
-    
 }
 
 body {
     font-family: "Poppins", bold;
-    
-    
-   
 }
   
-.container2{
-    background-color:#d0bdf4;
+.container {
+    background-image: url("clouds.png");
     display: grid;
     height: 100vh;
     grid-template-columns: 1.0fr 1.0fr 1fr 1fr;
     grid-template-rows: 0.3fr 1.5fr 1.2fr;
     grid-template-areas:
-      "nav2 nav2 nav2 nav2"
-      "content1b main2 main2 content2b"
-      "content1b main2 main2 content3b";
-    grid-gap: 10px;
+      "nav nav nav nav"
+      "content1 main main content2"
+      "content1 main main content3";
+    grid-gap: 0.8rem;
     font-weight: 800;
     font-size: 40px;
     color:  #494d5f;
     text-align: center;
-    margin: 0;
-    
-
 }
 
-.nav2 {
-    top: 10px;
-    grid-area: nav2;
+.nav {
+    grid-area: nav;
     text-align: center;
     font-size: 40px;
     position: relative;
@@ -47,7 +39,7 @@ button3{
     padding: 5px;
     border-radius: 8px; 
     position: absolute;
-    right: 550px;
+    right: 600px;
     top: 10px;
 }
 button3:hover {
@@ -55,20 +47,17 @@ button3:hover {
     color: #a0d2eb;
 }
   
-.main2 {
-    background-color:#e5eaf5;
-    grid-area: main2;
+.main {
+    background-color:#b7a4b4da;
+   
+    grid-area: main;
     border-radius: var(--main-radius);
     padding-top: var(--main-padding);
-    border: 3px solid #8458b3;
     border-style: dashed;
+    border-width: 5px;
+    border-color:#727088;
     position: relative;
-    bottom: 20px;
-    overflow:auto;
   }
-  .main2::-webkit-scrollbar {
-    width: 12px; /* Set the width of the scrollbar */
-}
 
 button4{
     background: none;
@@ -88,47 +77,47 @@ button4:hover {
   
 
   
-.content1b {
+.content1 {
   
-    grid-area: content1b;
+    grid-area: content1;
     border-radius: var(--main-radius);
     padding-top: var(--main-padding);
     position: relative;
-    margin: 20px;
     
     
 }
   
-.content2b {
-    grid-area: content2b;
-    border: 3px solid #8458b3;
+.content2 {
+    grid-area: content2;
     border-style: dashed; 
-    background-color:#e5eaf5;
+    border-width: 5px;
+    border-color: #727088; 
+    background-color:#b7a4b4da;
     font-size: 30px;
     border-radius: var(--main-radius);
     padding-top: var(--main-padding);
-    margin: 20px;
   }
   
-.content3b {
-    grid-area: content3b;
-    border: 3px solid #8458b3;
-    border-style: dashed;
-    background-color:#e5eaf5;
+.content3 {
+    grid-area: content3;
+    border-style: dashed; 
+    border-width: 5px;
+    border-color:#727088;
+    background-color:#b7a4b4da;
     font-size: 30px;
     border-radius: var(--main-radius);
     padding-top: var(--main-padding);
-    margin: 20px;
   }
   
 
 
-.sectionb{
+  section{
     font-size: 28px;
     text-align: left;
-    border: 3px solid #8458b3;
     border-style: dashed;
-    background-color:#e5eaf5;
+    border-width: 5px;
+    border-color:#727088;
+    background-color:#b7a4b4da;
     margin-bottom: 5%; 
     border-radius: var(--main-radius);
 
@@ -139,16 +128,16 @@ button4:hover {
     list-style-type: circle;
     
 }
-.ulB{
+ul{
     margin-top: 5%; 
 }
-.liB{
+li{
     text-align: left;
     list-style-type: none; 
     font-size: 22px; 
 }
 
-.liB:hover {
+li:hover {
     background-color: #494d5f; /* Background color on hover */
     color: #a0d2eb;
 }
@@ -188,43 +177,6 @@ button2 {
     position: center;
     padding: 10px;
     border-radius: 8px; 
-    background-color: #494d5f; /* Background color on hover */
-    color: #a0d2eb;
-}
-
-.smallGridContainer {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 10px;
-    margin:10px;
-    overflow: auto;
-    
-}
-
-.smallGridItem {
-   
-    border: 3px solid #8458b3;
-    background-color: #e5eaf5;
-    font-size: 18px;
-    border-radius: 15px;
-    padding: 50px;
-    margin-bottom:10px;
-    
-    
-}
-p{
-    text-align:left;
-}
-
-button5{
-    background: none;
-    color: #494d5f;
-    border: none;
-    font-size: 20px;
-    padding: 5px;
-    border-radius: 8px;   
-}
-button5:hover {
     background-color: #494d5f; /* Background color on hover */
     color: #a0d2eb;
 }
