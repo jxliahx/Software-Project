@@ -1,6 +1,6 @@
 
   
-  .TitleContainer {
+  .TitleContainer-cp {
     background-color: #d0bdf4;
     min-height: 5vh;
     display: flex;
@@ -45,7 +45,7 @@
     margin-top: 100px;
   }
   
-  .oldButton {
+  .oldButton-cp {
     color: #e5eaf5;
     font-family: "Poppins";
     font-size: 20pt;
@@ -58,7 +58,7 @@
     margin-top: 20px;
   }
 
-  .TitleText {
+  .TitleText-cp {
     color: #8458B3;
     font-family: "Poppins";
     font-size: 20pt;
@@ -70,7 +70,7 @@
     width: 50%;
   }
 
-  .TaskTitle {
+  .TaskTitle-cp {
     color: #8458B3;
     font-size: 26pt;
     align-items: center;
@@ -78,7 +78,7 @@
     font-family: "Poppins", extrabold;
   }
 
-  .AddTitle {
+  .AddTitle-cp {
     color: #8458B3;
     font-size: 18pt;
     align-items: center;
@@ -98,14 +98,14 @@
     color: #8458B3;
   }
 
-  .Container {
+  .Container-cp {
     max-width: calc(100% - 500px);
     width: 100%;
 
     flex-direction: column;
   }
 
-  .BigBox {
+  .BigBox-cp {
     /* max-width: calc(100% - 500px);
     width: 100%;
     margin: auto;
@@ -118,21 +118,21 @@
     justify-content:center;
   }
 
-  section {
+  /*section {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
+  }*/
 
-  .Tasks {
+  .Tasks-cp {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     flex-direction: row;
   }
 
-  .MemberContainer {
+  .MemberContainer-cp {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
@@ -150,7 +150,7 @@
     margin-bottom: 20px;
   }
 
-  .AddMember {
+  .AddMember-cp {
     max-width: calc(33.33% - 20px);
     width: 100%;
     height: 520px;
@@ -163,7 +163,7 @@
     margin-bottom: 20px;
   }
 
-  .Task {
+  .Task-cp {
     
     max-width: calc(33.33% - 20px);
     width: 100%;
@@ -184,7 +184,7 @@
     color: #643e8d;
   } */
 
-  .SubmitButton {
+  .SubmitButton-cp {
     color: #e5eaf5;
     font-family: "Poppins";
     font-size: 20pt;
@@ -197,7 +197,7 @@
     margin-top: 20px;
   }
 
-  .TaskButton {
+  .TaskButton-cp {
     color: #e5eaf5;
     font-family: "Poppins";
     font-size: 40pt;
@@ -218,11 +218,11 @@
     transition: .3s;
   }
 
-  .TaskButton:hover{
+  .TaskButton-cp:hover{
     background-color: #643e8d;
   }
 
-  .Title {
+  .Title-cp {
     color: #8458B3;
     font-size: 48pt;
     text-align: center;

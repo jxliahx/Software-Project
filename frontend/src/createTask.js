@@ -1,5 +1,5 @@
 import {React, useState} from 'react'
-import './createPage.css';
+import './createTask.css';
 
 // const [users] = useState([
 //     {
@@ -27,18 +27,18 @@ function CreateTask () {
 
     return (
         <div>
-            <div className="TitleContainer">
-                <header className='Title'>
+            <div className="TitleContainer-ct">
+                <header className="Title-ct">
                     Create a Task
                 </header>
             
             </div>
 
-            <div className="BigBox">
-                <div className="ContainerJ">
+            <div className="BigBox-ct">
+                <div className="Container-ct">
                     <div>
                         <textarea 
-                            className='AddTaskTitle'
+                            className="AddTaskTitle-ct"
                             name="taskTitle"
                             placeholder={"Add a Task Title"}
                             rows={1}
@@ -46,7 +46,7 @@ function CreateTask () {
                     </div>
                     <div>
                         <textarea
-                            className='TaskContainer'
+                            className="TaskContainer-ct"
                             name='task'
                             placeholder={"Add Task Instructions"}
                         />
@@ -59,8 +59,8 @@ function CreateTask () {
 
 
                 </div>
-                <div className="Assign">
-                    <header className="AddTitle">
+                <div className="Assign-ct">
+                    <header className="AddTitle-ct">
                         Assign member
                     </header>
                     <select>

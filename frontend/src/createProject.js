@@ -95,8 +95,8 @@ function CreateProject() {
 
   return (
     <div>
-      <div className="TitleContainer">
-        <header className="Title">Create a Project</header>
+      <div className="TitleContainer-cp">
+        <header className="Title-cp">Create a Project</header>
         <input class="createP"type="text" placeholder="Project Name"></input>
       </div>
       <div>
@@ -108,14 +108,14 @@ function CreateProject() {
         />
         {/* <button onClick={openModal}>Show Modal</button> */}
       </div>
-      <div className="BigBox">
-        <div className="Container">
-          <div className="Tasks">
+      <div className="BigBox-cp">
+        <div className="Container-cp">
+          <div className="Tasks-cp">
             {tasks.map((task, i) => (
-              <div key={i} className="Task">
-                <header className="TaskTitle">{task.title}</header>
+              <div key={i} className="Task-cp">
+                <header className="TaskTitle-cp">{task.title}</header>
                 <p></p>
-               <Link to="/createTask"><button className="TaskButton" onClick={openModal}>
+               <Link to="/createTask"><button className="TaskButton-cp" onClick={openModal}>
                   +
                 </button></Link>
 
@@ -126,8 +126,8 @@ function CreateProject() {
             ))}
           </div>
         </div>
-        <div className="MemberContainer">
-          <header className="AddTitle">Add members</header>
+        <div className="MemberContainer-cp">
+          <header className="AddTitle-cp">Add members</header>
           <div>
             <SearchBar setResults={setResults} />
             {results && results.length > 0 && (
