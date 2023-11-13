@@ -12,23 +12,6 @@
     font-family: "Poppins", extrabold;
   }
   
-  /*
-  .Container {
-     flex-direction: row;
-    display: flex;
-    justify-content:flex-start;
-    background-color: #d0bdf4;
-    min-height: 100vh; 
-    background-color: #d0bdf4;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: row;
-     align-items: center; 
-    justify-content:flex-start;
-     font-size: calc(10px + 2vmin); 
-  }
-  */
-
   .Graphic {
     /* width: 700px;
     margin-left: 50px; */
