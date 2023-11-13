@@ -7,7 +7,7 @@ body {
     font-family: "Poppins", bold;
 }
   
-.containerN {
+/*.containerN {
     background-color: #d0bdf4;;  
     display: grid;
     height: 100vh;
@@ -104,9 +104,16 @@ body {
 
 .liFont{
     font-size: 22px; 
+} */
+
+.container-landing {
+  margin: 0;
+  height: 500px;
 }
 
-.liFont:hover {
-    background-color: #494d5f; /* Background color on hover */
-    color: #a0d2eb;
+.currProjacts-landingg {
+  float: left;
+  width: 400px;
+  height: 500px;
 }
+
