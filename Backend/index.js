@@ -16,6 +16,7 @@ app.use(
       "http://localhost",
       "*",
     ],
+    headers: ["Content-Type"],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
