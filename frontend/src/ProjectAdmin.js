@@ -13,6 +13,7 @@ function ProjectAdmin() {
   const projectName = searchParams.get("projectName");
   const [members, setMembers] = useState([]);
   const [openTasks, setOpenTasks] = useState([]);
+  const [closedTasks, setClosedTasks] = useState([]);
   const [user, setUser] = useState([]);
   useEffect(() => {
     axios
@@ -40,6 +41,14 @@ function ProjectAdmin() {
       })
       .catch((err) => console.log(err));
   }, [openTasks]);
+  useEffect(() => {
+    axios
+      .get("http://localhost:5000/api/projects/closedTasks/" + projectID)
+      .then((result) => {
+        setClosedTasks(result.data);
+      })
+      .catch((err) => console.log(err));
+  }, [closedTasks]);
   return (
     <div className="container2">
       <NavigationBar />
@@ -120,8 +129,26 @@ function ProjectAdmin() {
       <div className="content3b">
         Completed Tasks
         <ul className="ulB">
-          <li className="liB">TaskC</li>
-          <li className="liB">TaskD</li>
+          {closedTasks.map((closedTask) => (
+            <li key={closedTask.TaskID}>
+              <div className="smallGridContainer">
+                <div className="smallGridItem">
+                  <div className="title">
+                    {closedTask.TaskName}
+                    <button>
+                      <BiEdit />
+                    </button>
+                  </div>
+                  <div className="smallGridItem">
+                    <p>
+                      Assigned to: {closedTask.FirstName} {closedTask.LastName}
+                    </p>
+                    <p>Due date: {closedTask.DueDate}</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+          ))}
         </ul>
       </div>
       <button>
