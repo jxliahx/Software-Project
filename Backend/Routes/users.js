@@ -25,7 +25,7 @@ router.post("/signup", (req, res) => {
       hash,
     ];
     dbConnection.query(sql, [values], (err, result) => {
-      res.set("Access-Control-Allow-Origin", "*");
+      //res.set("Access-Control-Allow-Origin", "*");
       if (err) return res.json({ Status: false, Error: err });
       return res.json({ Status: true });
     });
@@ -36,7 +36,7 @@ router.post("/signup", (req, res) => {
 router.post("/login", (req, res) => {
   const sql = "SELECT * from UsersInfo Where Username = ?";
   dbConnection.query(sql, [req.body.username], (err, result) => {
-    res.set("Access-Control-Allow-Origin", "*");
+    //res.set("Access-Control-Allow-Origin", "*");
     if (err) return res.json({ loginStatus: false, Error: "Query error" });
     if (result.length > 0) {
       bcrypt.compare(req.body.password, result[0].Password, (err, response) => {
@@ -66,7 +66,7 @@ router.post("/login", (req, res) => {
 router.get("/detail/:id", (req, res) => {
   const sql = "SELECT * FROM UsersInfo where UserID = ?";
   dbConnection.query(sql, [req.params.id], (err, result) => {
-    res.set("Access-Control-Allow-Origin", "*");
+    //res.set("Access-Control-Allow-Origin", "*");
     if (err) return res.json({ Status: false });
     return res.json(result);
   });
@@ -74,7 +74,7 @@ router.get("/detail/:id", (req, res) => {
 
 // This API delete the cookie when user logout
 router.get("/logout", (req, res) => {
-  res.set("Access-Control-Allow-Origin", "*");
+  //res.set("Access-Control-Allow-Origin", "*");
   res.clearCookie("token");
   return res.json({ Status: true });
 });
@@ -83,7 +83,7 @@ router.get("/logout", (req, res) => {
 router.get("/", function (req, res) {
   const sql = "SELECT * FROM UsersInfo";
   dbConnection.query(sql, (err, result) => {
-    res.set("Access-Control-Allow-Origin", "*");
+    //res.set("Access-Control-Allow-Origin", "*");
     if (err) return res.json({ Status: false });
     return res.json(result);
   });
@@ -98,7 +98,7 @@ router.get("/memberof", (req, res) => {
   const decodedValue = JSON.parse(atob(payload));
   const value = decodedValue.id;
   dbConnection.query(sql, value, (err, result) => {
-    res.set("Access-Control-Allow-Origin", "*");
+    //res.set("Access-Control-Allow-Origin", "*");
     if (err) return res.json({ Status: false, Error: err });
     return res.json(result);
   });
@@ -112,7 +112,7 @@ router.get("/admin", (req, res) => {
   const decodedValue = JSON.parse(atob(payload));
   const value = decodedValue.id;
   dbConnection.query(sql, value, (err, result) => {
-    res.set("Access-Control-Allow-Origin", "*");
+    //res.set("Access-Control-Allow-Origin", "*");
     if (err) return res.json({ Status: false, Error: err });
     return res.json(result);
   });
