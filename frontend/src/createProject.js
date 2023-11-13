@@ -96,6 +96,7 @@ function CreateProject() {
     <div>
       <div className="TitleContainer">
         <header className="Title">Create a Project</header>
+        <input class="createP"type="text" placeholder="Project Name"></input>
       </div>
       <div>
         <TaskModalPortal
