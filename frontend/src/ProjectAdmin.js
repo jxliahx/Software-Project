@@ -1,75 +1,133 @@
-import React from 'react';
-import './ProjectAdmin.css';
+import React, { useEffect, useState } from "react";
+import { useHistory } from "react-router-dom";
+import "./ProjectAdmin.css";
 import { BiEdit } from "react-icons/bi";
-import NavigationBar from './NavigationBar';
-import './NavigationBar.css';
-import {Link} from 'react-router-dom';
- 
+import NavigationBar from "./NavigationBar";
+import "./NavigationBar.css";
+import { Link } from "react-router-dom";
+import axios from "axios";
+
 function ProjectAdmin() {
-    return (
-     <div className='container2'>
+  const searchParams = new URLSearchParams(window.location.search);
+  const projectID = searchParams.get("projectID");
+  const projectName = searchParams.get("projectName");
+  const [members, setMembers] = useState([]);
+  const [openTasks, setOpenTasks] = useState([]);
+  const [user, setUser] = useState([]);
+  useEffect(() => {
+    axios
+      .get(
+        "http://localhost:5000/api/users/detail/" + localStorage.getItem("id")
+      )
+      .then((result) => {
+        setUser(result.data[0]);
+      })
+      .catch((err) => console.log(err));
+  }, [user]);
+  useEffect(() => {
+    axios
+      .get("http://localhost:5000/api/projects/members/" + projectID)
+      .then((result) => {
+        setMembers(result.data);
+      })
+      .catch((err) => console.log(err));
+  }, [members]);
+  useEffect(() => {
+    axios
+      .get("http://localhost:5000/api/projects/openTasks/" + projectID)
+      .then((result) => {
+        setOpenTasks(result.data);
+      })
+      .catch((err) => console.log(err));
+  }, [openTasks]);
+  return (
+    <div className="container2">
       <NavigationBar />
 
-      
-      <div className='nav2'> Example Project 
-      
-      <button3>< BiEdit/></button3>
-      
-       </div>
+      <div className="nav2">
+        {" "}
+        Project: {projectName}
+        <button>
+          <BiEdit />
+        </button>
+      </div>
 
-       <div className = 'content1b'> Members 
-       <button1>< BiEdit/></button1>
-       <section className='sectionb'> 
-       <ul className='ulB'>
-        <li className='liB'>Member1</li>
-        <li className='liB'>Member2</li>
-        </ul>
+      <div className="content1b">
+        {" "}
+        Members
+        <button>
+          <BiEdit />
+        </button>
+        <section className="sectionb">
+          <ul className="ulB">
+            <li key={user.UserID}>
+              <strong>
+                {user.FirstName} {user.LastName}
+              </strong>
+            </li>
+            {members.map((member) => (
+              <li key={member.UserID}>
+                {member.FirstName} {member.LastName}
+              </li>
+            ))}
+          </ul>
         </section>
-        <button2>Send Invitation</button2>
-        </div>
-        
-        <div class="main2">
-        <button4>< BiEdit/></button4>
-    <div class="title">Current Tasks</div>
-    <div class="smallGridContainer">
-        <div class="smallGridItem">
-        
-          <div className='title'>Item 1  <button5>< BiEdit/></button5></div> 
-          <p>Assigned to:</p>
-          <p>Due date:</p>
-          </div>
-        <div class="smallGridItem">
-        <div className='title'>Item 2<button5>< BiEdit/></button5></div> 
-        <p>Assigned to:</p>
-          <p>Due date:</p>
-          </div>
-          <div class="smallGridItem">
-          <div className='title'>Item 3 <button5>< BiEdit/></button5></div> 
-          <p>Assigned to:</p>
-          <p>Due date:</p>
-          </div>
+        <button>Send Invitation</button>
+      </div>
+
+      <div className="main2">
+        <button>
+          <BiEdit />
+        </button>
+        <div className="title">Current Tasks</div>
+        <ul>
+          {openTasks.map((openTask) => (
+            <li key={openTask.TaskID}>
+              <div className="smallGridContainer">
+                <div className="smallGridItem">
+                  <div className="title">
+                    {openTask.TaskName}
+                    <button>
+                      <BiEdit />
+                    </button>
+                  </div>
+                  <div className="smallGridItem">
+                    <p>
+                      Assigned to: {openTask.FirstName} {openTask.LastName}
+                    </p>
+                    <p>Due date: {openTask.DueDate}</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div className="content2b">
+        Awaiting Approval
+        <ul className="ulB">
+          <Link to="/taskApproval">
+            <li className="liB">TaskA</li>
+          </Link>
+          <Link to="/taskApproval">
+            {" "}
+            <li className="liB">TaskB</li>
+          </Link>
+        </ul>
+      </div>
+
+      <div className="content3b">
+        Completed Tasks
+        <ul className="ulB">
+          <li className="liB">TaskC</li>
+          <li className="liB">TaskD</li>
+        </ul>
+      </div>
+      <button>
+        <a href={"/createTask?project=" + projectID}>Add new task</a>
+      </button>
     </div>
-</div>
-        
-        
-      
- 
-        
-
-        <div className='content2b'>Awaiting Approval
-        <ul className='ulB'>
-        <Link to="/taskApproval"><li className='liB'>TaskA</li></Link>
-        <Link to="/taskApproval"> <li className='liB'>TaskB</li></Link>
-        </ul>
-        </div>
-
-        <div className='content3b'>Completed Tasks
-        <ul className='ulB'>
-        <li className='liB'>TaskC</li>
-        <li className='liB'>TaskD</li>
-        </ul>
-        </div>
-     </div>
-    );
-  }
-  export default ProjectAdmin;
+  );
+}
+export default ProjectAdmin;

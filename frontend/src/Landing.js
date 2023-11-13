@@ -19,7 +19,7 @@ function Landing() {
         setUser(result.data[0]);
       })
       .catch((err) => console.log(err));
-  }, []);
+  }, [user]);
   useEffect(() => {
     axios
       .get("http://localhost:5000/api/users/admin")
@@ -68,7 +68,18 @@ function Landing() {
             {" "}
             My Projects:
             {padmins.map((padmin) => (
-              <li key={padmin.ProjectID}>{padmin.ProjectName}</li>
+              <li key={padmin.ProjectID}>
+                <a
+                  href={
+                    "/ProjectAdmin?projectID=" +
+                    padmin.ProjectID +
+                    "&projectName=" +
+                    padmin.ProjectName
+                  }
+                >
+                  {padmin.ProjectName}
+                </a>
+              </li>
             ))}
           </section>
         </ul>
@@ -77,7 +88,18 @@ function Landing() {
             {" "}
             Shared With Me:
             {projects.map((project) => (
-              <li key={project.ProjectID}>{project.ProjectName}</li>
+              <li key={project.ProjectID}>
+                <a
+                  href={
+                    "/ProjectUser?projectID=" +
+                    project.ProjectID +
+                    "&projectName=" +
+                    project.ProjectName
+                  }
+                >
+                  {project.ProjectName}
+                </a>
+              </li>
             ))}
           </section>
         </ul>

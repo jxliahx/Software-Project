@@ -13,6 +13,9 @@ import Invitation from './Invitation';
 import Landing from './Landing';
 import Logout from "./logout";
 import CreateProject from "./createProject";
+import CreateTask from "./createTask";
+import ProjectAdmin from "./ProjectAdmin";
+import ProjectUser from "./ProjectUser";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFolderOpen } from "@fortawesome/free-solid-svg-icons";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
@@ -49,6 +52,9 @@ function App() {
           <Route exact path="/createProject">
             <CreateProject />
           </Route>
+          <Route exact path="/createTask">
+            <CreateTask />
+          </Route>
           <Route path="/login">
             <Login />
           </Route>
@@ -72,6 +78,12 @@ function App() {
           </Route>
           <Route path="/Landing">
             <Landing />
+          </Route>
+          <Route path="/ProjectAdmin">
+            <ProjectAdmin />
+          </Route>
+          <Route path="/ProjectUser">
+            <ProjectUser />
           </Route>
         </Switch>
       </div>
