@@ -25,7 +25,7 @@ function Landing() {
       .get("http://localhost:5000/api/users/admin")
       .then((result) => {
         setPadmins(result.data);
-        console.log(padmins);
+        //console.log(padmins);
       })
       .catch((err) => console.log(err));
   }, [padmins]);
@@ -34,7 +34,7 @@ function Landing() {
       .get("http://localhost:5000/api/users/memberof")
       .then((result) => {
         setProjects(result.data);
-        console.log(projects);
+        //console.log(projects);
       })
       .catch((err) => console.log(err));
   }, [projects]);
