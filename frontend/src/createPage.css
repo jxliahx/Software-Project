@@ -70,6 +70,7 @@
     font-size: 18pt;
     text-align: center;
     align-items: center;
+    width: 100%;
     /* margin-left: 20px; */
     font-family: "Poppins", extrabold;
   }
@@ -102,8 +103,11 @@
     background-color: #d0bdf4;
     min-height: 5vh;
     display: flex;
+    max-width: 90%;
     flex-direction: row;
     justify-content:center;
+    align-content: center;
+    margin-left: 5%;
   }
 
   /*section {
@@ -183,6 +187,16 @@
     border-style: hidden;
     align-self: center;
     margin-top: 20px;
+    justify-self: center;
+  }
+
+  .SubmitButton:hover{
+    background-color: #643e8d;
+  }
+
+  .ButtonBox {
+    margin-left: 54%;
+    margin-top: -2%;
   }
 
   .TaskButton {
@@ -268,3 +282,20 @@
   textarea {
     resize:none;
   }
+
+  select {
+    width: 100%;
+  }
+
+ul {
+  width: 100%;
+}
+
+.DueDate {
+  width: 100%;
+}
+
+input {
+  width: 100%;
+  margin: auto;
+}
