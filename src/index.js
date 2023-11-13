@@ -21,13 +21,13 @@ root.render(
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import Invitation from './Invitation';
+import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Invitation/>
+    <App />
   </React.StrictMode>
 );
 

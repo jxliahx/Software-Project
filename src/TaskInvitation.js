@@ -21,20 +21,21 @@ function TaskForm() {
 
   return (
     <div className="form-container">
-      <h2><div className='icon'>< BsListTask /></div>Task Invitation</h2>
+      <h2>Task Invitation</h2>
       {invitationAccepted ? (
         <p>Invitation Accepted!</p>
       ) : invitationDeclined ? (
         <p>Invitation Declined!</p>
       ) : (
-        <p>
+        <div>
+          <p><div className='icon'>< BsListTask /></div>
             You've been assigned to XXXXX task.
           <div className="button-container">
-            <button className="inviteButton1" onClick={handleAcceptInvitation}>< AiOutlineCheckCircle /></button> 
-            <button className="inviteButton1" onClick={handleDeclineInvitation}> < MdOutlineCancel /></button>
+            <button onClick={handleAcceptInvitation}>< AiOutlineCheckCircle /></button> 
+            <button onClick={handleDeclineInvitation} className="decline-button"> < MdOutlineCancel /></button>
           </div>
           </p>
-        
+        </div>
       )}
     </div>
   );

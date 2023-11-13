@@ -20,7 +20,7 @@ function ReceiverForm() {
 
   return (
     <div className="form-container">
-      <h2><div className='icon'>< AiOutlineFundProjectionScreen /></div>Project Invitation</h2>
+      <h2>Project Invitation</h2>
       {invitationAccepted ? (
         <p>Invitation Accepted!</p>
       ) : invitationDeclined ? (
@@ -28,10 +28,11 @@ function ReceiverForm() {
       ) : (
         <div>
           <p>
+            <div className='icon'>< AiOutlineFundProjectionScreen /></div>
             You've been invited to join the  XXXXX project.
           <div className="button-container">
-            <button className="inviteButton1" onClick={handleAcceptInvitation}><AiOutlineCheckCircle/></button> 
-            <button className="inviteButton1" onClick={handleDeclineInvitation}><MdOutlineCancel /></button>
+            <button1 onClick={handleAcceptInvitation}><AiOutlineCheckCircle/></button1> 
+            <button1 onClick={handleDeclineInvitation} className="decline-button"><MdOutlineCancel /></button1>
           </div>
           </p>
         </div>
@@ -41,5 +42,4 @@ function ReceiverForm() {
 }
 
 export default ReceiverForm;
-
 

@@ -27,7 +27,7 @@ function SenderForm() {
         <form onSubmit={handleSubmit}>
           <div className="form-group">
             <label htmlFor="username"></label>
-            <select className="senderSelect"
+            <select
               id="username"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
@@ -41,7 +41,7 @@ function SenderForm() {
           <br></br>
           <div className="form-group">
             <label htmlFor="projectTitle"></label>
-            <select className="senderSelect"
+            <select
               id="projectTitle"
               value={projectTitle}
               onChange={(e) => setProjectTitle(e.target.value)}
@@ -52,7 +52,7 @@ function SenderForm() {
               <option value="Project3">Project3</option>
             </select>
           </div>
-          <button className="inviteButton" type="submit"><BiMailSend /></button>
+          <button type="submit"><BiMailSend /></button>
         </form>
       )}
     </div>
