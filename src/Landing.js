@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom';
 
 function Landing() {
     return (
-     <div className='container'>
+     <div className='containerN'>
       <div className='sidebar'>
       <NavigationBar />
 

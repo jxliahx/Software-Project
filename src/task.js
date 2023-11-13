@@ -12,7 +12,7 @@ export default function Task() {
 
    
     return (
-        <div class="Container3">
+        <div class="ContainerK2">
         <h1 class="title">Example Project: Task 1</h1>
         <NavigationBar/>
         <div class="id">

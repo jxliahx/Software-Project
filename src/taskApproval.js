@@ -6,7 +6,7 @@ import NavigationBar from './NavigationBar';
 export default function TaskApproval(){
   
 return (
-    <div class="Container2">
+    <div class="ContainerK2">
         <NavigationBar/>
         <h1 class="t1">Task 1</h1>
         <form>

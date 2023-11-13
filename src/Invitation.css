@@ -72,13 +72,6 @@
   color: #a0d2eb;
 }
 
-input {
-  width: 100%; /* Make the input element span the entire width of the form */
-  padding: 10px;
-  margin: 5px 0; /* Add margin around the input element */
-  background-color: #494d5f; /* Set the background color */
-}
-
 .navigation {
   position: absolute;
   top: 0;
