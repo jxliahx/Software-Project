@@ -96,7 +96,8 @@ a {
 }
 
 .signupBox {
-   margin-left: 475px;
+   margin-left: auto;
+   margin-right: auto;
    width: 400px;
    background-color: #d0bdf4;
     background-position: fixed;
@@ -128,7 +129,8 @@ a {
 }
 
 .loginBox {
-    margin-left: 455px;
+    margin-left: auto;
+    margin-right: auto;
     width: 400px;
     background-color: #d0bdf4;
     background-position: fixed;
@@ -154,6 +156,7 @@ input {
     border-radius: 10px;
     padding-left: 15px;
     font-size: 15px;
+    margin-right: 200px;
     margin-top: -20px;
 }
 
@@ -178,11 +181,13 @@ error {
 
 span {
     color: #8458b3;
-    padding-left: 5px;
     cursor: pointer;
+    float: right;
+    margin-top: -20px;
+    margin-right: 40px;
 }
 
-.Container2 {
+.ContainerK2 {
     margin: 0;
 }
 
@@ -354,52 +359,4 @@ h3 {
     margin: 20px; /* Adjust the margin as needed */
   }
   
-  .dropdown-button {
-    background-color: #d0bdf4; /* Button background color */
-    color: #8458b3; /* Button text color */
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 30pt; 
-    font-family: "Poppins"; /* Change the font-family */
-    font-weight: bold; /* Make the text bold */
-  }
-  .dropdown-button:hover {
-    background-color: #494d5f; /* Background color on hover */
-    color: #a0d2eb;
-  }
   
-  .dropdown-menu {
-    position: absolute;
-    background-color: #d0bdf4; /* Dropdown background color */
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    z-index: 1;
-  }
-  
-  .dropdown-menu li {
-    padding: 10px;
-  }
-  
-  .dropdown-menu li a {
-    text-decoration: none;
-    color: #494d5f; /* Dropdown link color */
-    display: block;
-  }
-  
-  .dropdown-menu li a:hover {
-    background-color: #494d5f; /* Background color on hover */
-    color: #a0d2eb;
-  }
-
-  
-
-
-
-
-
-
-
-
-
