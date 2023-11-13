@@ -58,6 +58,7 @@ app.use(
       "https://studentgrouppm.onrender.com/",
       "http://localhost:3000",
       "http://localhost",
+      "*",
     ],
     headers: ["Content-Type"],
     methods: ["GET", "POST", "PUT", "DELETE"],
