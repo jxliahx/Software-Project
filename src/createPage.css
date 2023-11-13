@@ -98,7 +98,7 @@
     color: #8458B3;
   }
 
-  .Container {
+  .ContainerJ {
     max-width: calc(100% - 500px);
     width: 100%;
 
@@ -125,7 +125,7 @@
     align-items: center;
   }*/
 
-  .Tasks {
+  .TasksJ {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -163,7 +163,7 @@
     margin-bottom: 20px;
   }
 
-  .Task {
+  .TaskJ {
     
     max-width: calc(33.33% - 20px);
     width: 100%;

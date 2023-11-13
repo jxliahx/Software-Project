@@ -112,11 +112,11 @@ function CreatePage () {
                                     {/* <button onClick={openModal}>Show Modal</button> */}
                     </div>
             <div className="BigBox">
-                <div className="Container">
-                    <div className="Tasks">
+                <div className="ContainerJ">
+                    <div className="TasksJ">
                         {
                             tasks.map((task, i) => (
-                                <div key={i} className="Task">
+                                <div key={i} className="TaskJ">
                                     <header className="TaskTitle">
                                         {task.title}
                                     </header>
