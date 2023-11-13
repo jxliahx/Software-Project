@@ -8,6 +8,8 @@ function Landing() {
   const history = useHistory();
   axios.defaults.withCredentials = true;
   const [user, setUser] = useState([]);
+  const [padmins, setPadmins] = useState([]);
+  const [projects, setProjects] = useState([]);
   useEffect(() => {
     axios
       .get(
@@ -18,6 +20,24 @@ function Landing() {
       })
       .catch((err) => console.log(err));
   }, []);
+  useEffect(() => {
+    axios
+      .get("http://localhost:5000/api/users/admin")
+      .then((result) => {
+        setPadmins(result.data);
+        console.log(padmins);
+      })
+      .catch((err) => console.log(err));
+  }, [padmins]);
+  useEffect(() => {
+    axios
+      .get("http://localhost:5000/api/users/memberof")
+      .then((result) => {
+        setProjects(result.data);
+        console.log(projects);
+      })
+      .catch((err) => console.log(err));
+  }, [projects]);
   return (
     <div className="container">
       <div className="sidebar">
@@ -47,16 +67,18 @@ function Landing() {
           <section>
             {" "}
             My Projects:
-            <li>Project1</li>
-            <li>Project2</li>
+            {padmins.map((padmin) => (
+              <li key={padmin.ProjectID}>{padmin.ProjectName}</li>
+            ))}
           </section>
         </ul>
         <ul className="list">
           <section>
             {" "}
             Shared With Me:
-            <li>Project3</li>
-            <li>Project4</li>
+            {projects.map((project) => (
+              <li key={project.ProjectID}>{project.ProjectName}</li>
+            ))}
           </section>
         </ul>
       </div>
