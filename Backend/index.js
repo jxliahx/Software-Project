@@ -22,9 +22,9 @@ app.use(express.urlencoded({ extended: true }));
 
 //middleware
 app.use(express.json());
-//app.use(authJwt());
+/*app.use(authJwt());
 //app.use(errorHandler());
-app.use((req, res, next) => {
+//app.use((req, res, next) => {
   res.setHeader(
     "Access-Control-Allow-Origin",
     "https://studentgrouppm.onrender.com"
@@ -43,7 +43,7 @@ app.use((req, res, next) => {
   res.setHeader("Access-Control-Max-Age", 7200);
 
   next();
-});
+});*/
 
 //Routes
 const usersRoutes = require("./Routes/users");
@@ -51,6 +51,19 @@ app.use(`/api/users`, usersRoutes);
 
 const projectsRoutes = require("./Routes/projects");
 app.use(`/api/projects`, projectsRoutes);
+
+app.use(
+  cors({
+    origin: [
+      "https://studentgrouppm.onrender.com/",
+      "http://localhost:3000",
+      "http://localhost",
+    ],
+    headers: ["Content-Type"],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+  })
+);
 
 app.listen(port, () => {
   console.log(`Server is running at ${port}`);
