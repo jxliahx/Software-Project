@@ -11,6 +11,7 @@ app.use(
   cors({
     origin: [
       "https://cs476-StudentGroupPM-backend.onrender.com",
+      "https://studentgrouppm.onrender.com/",
       "http://localhost:5000",
       "http://localhost:3000",
       "http://localhost",
