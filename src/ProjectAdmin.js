@@ -3,6 +3,7 @@ import './ProjectAdmin.css';
 import { BiEdit } from "react-icons/bi";
 import NavigationBar from './NavigationBar';
 import './NavigationBar.css';
+import {Link} from 'react-router-dom';
  
 function ProjectAdmin() {
     return (
@@ -57,8 +58,8 @@ function ProjectAdmin() {
 
         <div className='content2b'>Awaiting Approval
         <ul className='ulB'>
-        <li className='liB'>TaskA</li>
-        <li className='liB'>TaskB</li>
+        <Link to="/taskApproval"><li className='liB'>TaskA</li></Link>
+        <Link to="/taskApproval"> <li className='liB'>TaskB</li></Link>
         </ul>
         </div>
 
