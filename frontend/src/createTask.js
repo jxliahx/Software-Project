@@ -52,6 +52,10 @@ function CreateTask () {
                         />
                             
                     </div>
+                    <div>
+                        <p>Enter Due Date: </p>
+                        <input class="DueDate" type="date" ></input>
+                    </div>
 
 
                 </div>

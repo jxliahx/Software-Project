@@ -4,6 +4,7 @@ import { SearchBar } from "./Components/searchBar";
 import { SearchResultsList } from "./Components/searchResultsList";
 import TaskModalPortal from "./Components/taskModalPortal";
 import Modal from "./Components/taskModal";
+import {Link} from 'react-router-dom';
 
 // const Button = styled.button `
 //     color: #e5eaf5;
@@ -96,6 +97,7 @@ function CreateProject() {
     <div>
       <div className="TitleContainer">
         <header className="Title">Create a Project</header>
+        <input class="createP"type="text" placeholder="Project Name"></input>
       </div>
       <div>
         <TaskModalPortal
@@ -113,9 +115,9 @@ function CreateProject() {
               <div key={i} className="Task">
                 <header className="TaskTitle">{task.title}</header>
                 <p></p>
-                <button className="TaskButton" onClick={openModal}>
+               <Link to="/createTask"><button className="TaskButton" onClick={openModal}>
                   +
-                </button>
+                </button></Link>
 
                 {/*{isOpen && (
                                         <Modal onClose={closeModal} />
