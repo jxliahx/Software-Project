@@ -1,0 +1,109 @@
+.mBackgroundStrip {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Use the full height of the viewport */
+  }
+  
+  .mBackgroundImage {
+    backdrop-filter: blur(5px); /* Adjust the blur radius as needed */
+    background: linear-gradient(
+      rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0.7)
+    ), 
+    url('./graphic.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Set z-index to move it behind other elements */
+    
+  }
+
+.mContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: none;
+  }
+  
+  .mPage{
+    margin-top:20px;
+    background-color:none;
+    color:#8458B3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins", extrabold;
+   
+  }
+
+  .mTitle{
+   
+    text-align:center;
+    font-size: 52pt;
+    position: relative;
+  }
+
+  .msignupBox {
+    top:10px;
+    margin-top:70px;
+    width: 350px; /* Set the width of the form */
+    padding: 20px; /* Add some padding to the form */
+    border: 3px solid #8458B3; /* Add a border for better visibility */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a box shadow for a subtle effect */
+    background-color: #e5eaf5; /* Set the background color of the form */
+    border-radius: 10px;
+    
+  }
+  .minput{
+    background-color: #d0bdf4;
+    border: 3px solid #8458B3;
+    border-radius: 10px;
+    width: 80%;
+
+  }
+
+  .s {
+    text-align: center;
+    background-color:none;
+  }
+  .mmember {
+
+    font-size: 30px;
+    text-align: center;
+  
+  }
+  
+  .mLabels{
+    padding:10px;
+  }
+  
+  .Button123{
+  position: realtive;
+  width: 100%;
+  background-color: #494d5f;
+  color: #a0d2eb;
+  border: none;
+  padding: 10px;
+  margin-top: 10%;
+  border-radius: 10px;
+  }
+
+  .Button123:hover{
+    background-color: #494d5f;
+  color: #a0d2eb;
+  }
+  
+ 
+
+.mTitle{
+    background-color: none;
+    top:0px;
+}
+
+
+ 

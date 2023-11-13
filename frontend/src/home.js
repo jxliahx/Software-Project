@@ -1,6 +1,7 @@
 import {Link} from 'react-router-dom';
 import graphic from './graphic.png';
 import { useHistory } from "react-router-dom";
+import './App.css';
 
 export default function Home() {
   const history = useHistory();
@@ -9,22 +10,22 @@ export default function Home() {
     history.push("/landing");
   }
   return (
-    <div className="TitleContainer">
+    <div className="kTitleContainer">
       <div>
-        <header className="Title">Student Group Project Manager</header>
+        <header className="kTitle">Student Group Project Manager</header>
 
         {/* <FontAwesomeIcon icon={faFolderOpen} /> */}
       </div>
-      <div className="Container">
-        <img className="Graphic" src={graphic} />
-        <div className="Slogan">
+      <div className="kContainer">
+        <img className="kGraphic" src={graphic} />
+        <div className="kSlogan">
           organize <br /> collaborate <br /> create <br />
-          <button className="Button">
-            <Link to="/signup">Sign up now!</Link>
+          <button className="klButton">
+            <Link to="/signup" className="klButton">Sign up now!</Link>
           </button>
         </div>
 
-        <div className="Container"></div>
+        <div className="kContainer"></div>
       </div>
     </div>
   );

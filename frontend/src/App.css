@@ -1,4 +1,4 @@
-.App {
+/*.App {
   text-align: center;
 }
 
@@ -36,9 +36,10 @@
   to {
     transform: rotate(360deg);
   }
-}
+}*/
+/* home.js */
 
-.Title {
+.kTitle {
   color: #8458B3;
   font-size: 48pt;
   align-items: start;
@@ -46,7 +47,7 @@
   font-family: "Poppins", extrabold;
 }
 
-.TitleContainer {
+.kTitleContainer {
   background-color: #d0bdf4;
   min-height: 100vh;
   display: flex;
@@ -54,11 +55,11 @@
   justify-content:flex-start;
 }
 
-.Title-font {
+.kTitle-font {
   font-family: "Poppins", extrabold;
 }
 
-.Container {
+.kContainer {
   /* flex-direction: row;
   display: flex;
   justify-content:flex-start;
@@ -73,23 +74,23 @@
   /* font-size: calc(10px + 2vmin); */
 }
 
-.Graphic {
+.kGraphic {
   /* width: 700px;
   margin-left: 50px; */
   width: 60%;
   height: 60%;
 }
 
-.Slogan {
+.kSlogan {
   color: #8458B3;
   font-size: 56pt;
   align-items: start;
-  margin-left: 50px;
+  margin-left: 150px;
   font-family: "Poppins", extrabold;
-  margin-top: 100px;
+  margin-top: 200px;
 }
 
-.Button {
+.klButton {
   color: #a0d2eb;
   font-family: "Poppins";
   font-size: 20pt;
@@ -100,9 +101,23 @@
   border-style: hidden;
 }
 
-.Background {
-  background-color: '#d0bdf4';
+.klButton:hover{
+  background-color: #494d5f;
+  color: #a0d2eb;
 }
+
+
+
+
+
+
+
+
+
+
+/*.kBackground {
+  background-color: '#d0bdf4';
+}*/
 
 /* Ice Cold: #a0d2eb
 

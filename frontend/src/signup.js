@@ -8,6 +8,8 @@ import {Link} from 'react-router-dom';
 //import {dotenv} from "dotenv/config";
 import { useHistory } from "react-router-dom";
 import axios from 'axios';
+import './signup.css';
+import graphic from './graphic.png';
 
 
 export default function Signup() {
@@ -47,31 +49,35 @@ export default function Signup() {
   };
 
   return (
-    <div className="ContainerK">
-      <h1 className="s">
-        Welcome to SGPM
-        <ul className="member">
-          Already a member? <Link to="/login">Login</Link>
-        </ul>
-      </h1>
-      <form className="signupBox" onSubmit={handleSubmit(onSubmit)}>
-        <p>First Name: </p>
-        <input
+    <div className="mBackgroundStrip">
+    <div className="mBackgroundImage"></div>
+    <div className="mPage mcenteredContent">
+     
+        <div className="mTitle">Welcome to SGPM
+        <div className="mmember">
+          Already a member? <Link to="/login" className="mlink">Login</Link>
+        </div>
+        </div>
+      
+      <div className="mContainer">
+      <form className="msignupBox" onSubmit={handleSubmit(onSubmit)}>
+        <p className='mLabels'>First Name: </p>
+        <input className="minput"
           {...register("firstName", { required: true })}
           style={errors.fname && { border: "2px solid red" }}
         />
-        <p>Last Name: </p>
-        <input
+        <p className='mLabels'>Last Name: </p>
+        <input className="minput"
           {...register("lastName", { required: true })}
           style={errors.lname && { border: "2px solid red" }}
         />
-        <p>Username:</p>
-        <input
+        <p className='mLabels'>Username:</p>
+        <input className="minput"
           {...register("username", { required: true })}
           style={errors.uname && { border: "2px solid red" }}
         />
-        <p>Email:</p>
-        <input
+        <p className='mLabels'>Email:</p>
+        <input className="minput"
           {...register("email", {
             required: true,
             pattern: {
@@ -82,8 +88,8 @@ export default function Signup() {
           style={errors.email && { border: "2px solid red" }}
         />
         {errors.email && <error>{errors.email.message}</error>}
-        <p>Password:</p>
-        <input
+        <p className='mLabels'>Password:</p>
+        <input className="minput"
           type={type}
           {...register("password", {
             required: true,
@@ -95,14 +101,14 @@ export default function Signup() {
           style={errors.pwd && { border: "2px solid red" }}
         />
         <span
-          className="flex justify-around items-center"
+          className="meye"
           onClick={handleToggle}
         >
-          <Icon className="absolute mr-10" icon={icon} size={20} />
+          <Icon className="meye" icon={icon} size={20} />
         </span>
         {errors.pwd && <error>{errors.pwd.message}</error>}
-        <p>Confirm Password:</p>
-        <input
+        <p className='mLabels'>Confirm Password:</p>
+        <input className="minput"
           type={type}
           {...register("cpwd", {
             required: true,
@@ -111,16 +117,18 @@ export default function Signup() {
           style={errors.cpwd && { border: "2px solid red" }}
         />
         <span
-          className="flex justify-around items-center"
+          className="meye"
           onClick={handleToggle}
         >
-          <Icon className="absolute mr-10" icon={icon} size={20} />
+          <Icon className="meye" icon={icon} size={20} />
         </span>
         {errors.cpwd && <error>{errors.cpwd.message}</error>}
-        <button className="sb" type="submit">
+        <button className="Button123" type="submit">
           Sign Up
         </button>
       </form>
+      </div>
+    </div>
     </div>
   );
 }
