@@ -1,6 +1,5 @@
 
 import React, { useEffect, useState } from "react";
-import { useHistory } from "react-router-dom";
 import './task.css';
 import { useDropzone } from 'react-dropzone';
 import NavigationBar from './NavigationBar';
@@ -13,12 +12,6 @@ export default function Task() {
       setUploadedFiles(acceptedFiles);
     },
   });
-
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-
-  const toggleDropdown = () => {
-    setIsDropdownOpen(!isDropdownOpen);
-  };
 
   const searchParams = new URLSearchParams(window.location.search);
   const taskID = searchParams.get("taskID");
