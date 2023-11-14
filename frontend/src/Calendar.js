@@ -22,10 +22,10 @@ function Calendar1() {
     <div className='app'>
       <NavigationBar /> 
       <div className='title-container'>
-        <h1 className='title'>Calendar
-        <br>
-        </br><button>Back</button></h1>
-      </div>
+        <h1 className='title'>Calendar</h1>
+       </div>
+        
+     
       <div className='calendar-container'>
         <Calendar onChange={setDate} value={date} onClickDay={openTimeSchedule} />
       </div>
