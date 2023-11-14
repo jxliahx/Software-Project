@@ -184,7 +184,7 @@
     color: #643e8d;
   } */
 
-  .SubmitButton-cp {
+  /* .SubmitButton-cp {
     color: #e5eaf5;
     font-family: "Poppins";
     font-size: 20pt;
@@ -195,7 +195,7 @@
     border-style: hidden;
     align-self: center;
     margin-top: 20px;
-  }
+  } */
 
   .TaskButton-cp {
     color: #e5eaf5;
@@ -232,3 +232,45 @@
     margin-bottom: 40px;
     margin-top: 20px;
   }
+
+  input {
+    width: 100%;
+    margin: auto;
+  }
+
+  .createP {
+      max-width: 90%;
+      width: 100%;
+      background: #e5eaf5;
+      border: solid #8458B3;
+      border-color: #8458B3;
+      border-width: 10px;
+      border-radius: 30px;
+      padding: 20px;
+      margin-bottom: 20px;
+      font-size: 24pt;
+      font-family: "Poppins", extrabold;
+  }
+
+  .ButtonBox-cp {
+    margin-left: 54%;
+    margin-top: -2%;
+  }
+
+.SubmitButton-cp {
+  color: #e5eaf5;
+  font-family: "Poppins";
+  font-size: 20pt;
+  width: 300px;
+  height: 70px;
+  background-color: #8458B3;
+  border-radius: 2cm;
+  border-style: hidden;
+  align-self: center;
+  margin-top: 20px;
+  justify-self: center;
+}
+
+.SubmitButton-ct:hover{
+  background-color: #643e8d;
+}

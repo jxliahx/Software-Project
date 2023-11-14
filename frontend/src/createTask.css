@@ -190,7 +190,7 @@
     justify-self: center;
   }
 
-  .SubmitButton:hover{
+  .SubmitButton-ct:hover{
     background-color: #643e8d;
   }
 
@@ -299,7 +299,4 @@ input {
   width: 100%;
   margin: auto;
 }
-<<<<<<< HEAD:frontend/src/createPage.css
 
-=======
->>>>>>> 9b3d4de08b84ea6bae0ef272df3ea1d4ea877c7e:frontend/src/createTask.css
