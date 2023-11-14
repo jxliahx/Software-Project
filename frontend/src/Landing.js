@@ -50,7 +50,7 @@ function Landing() {
       </div>
 
       <div className="main-landing">
-        {" "}
+        
         Upcoming Deadlines
         <ul className="list-landing">
           <section class="deadlines-landing">
@@ -61,7 +61,7 @@ function Landing() {
       </div>
 
       <div className="content1-landing">
-        {" "}
+        
         Current Projects
         <ul className="list-landing">
           <section class="currProjects-landing">
