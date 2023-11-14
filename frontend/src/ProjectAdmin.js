@@ -81,7 +81,7 @@ function ProjectAdmin() {
             ))}
           </ul>
         </section>
-        <button className="button2">Send Invitation</button>
+        <Link to="/Invitation"><button className="button2">Send Invitation</button></Link>
       </div>
 
       <div className="main2">
