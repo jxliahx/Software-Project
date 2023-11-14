@@ -1,0 +1,79 @@
+.Container-ta {
+    margin: 0;
+}
+
+.t1-ta {
+    text-align: center;
+    font-size: 50px;
+    padding-top: 10px;
+    color: #8458b3;
+}
+
+.taskDiv-ta {
+    align-items: center;
+    justify-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    height: 400px;
+    width: 500px;
+    
+}
+
+.files-ta {
+    border: dashed;
+    border-radius: 20px;
+    border-color: #494d5f;
+    height: 300px;
+    width: 500px;
+    margin-top: -30px;
+}
+
+.task-ta {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    border: none;
+    border-radius: 20px;
+    color: #8458b3;
+}
+
+.f-ta {
+    font-size: 30px;
+    color: #8458b3;
+    text-decoration: underline;
+}
+
+.files-ta {
+    padding-left: 40px;
+    color: #8458b3;
+    width: 450px;
+}
+
+.yn-ta {
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
+
+.yes-ta {
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+    margin-right: 40px;
+    border-radius: 10px;
+    background-color: #8fffc9;
+    border: none;
+    color:#e5eaf5; 
+}
+.no-ta {
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+    background-color: #d95763;
+    border: none;
+    color:#e5eaf5; 
+}
