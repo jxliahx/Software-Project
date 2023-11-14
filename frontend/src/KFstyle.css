@@ -4,13 +4,13 @@ body{
     margin: 0;
 }
 
-.ContainerK {
+/*.ContainerK {
     /* flex-direction: row;
     display: flex;
     justify-content:flex-start;
     background-color: #d0bdf4;
-    min-height: 100vh; */
-    /*background-color: #d0bdf4;*/
+    min-height: 100vh; 
+   
     position: fixed;
     width: 100%;
     overflow: hidden;
@@ -162,7 +162,7 @@ input {
 
 input:focus {
     outline: none;
-}
+} */
 
 error {
     color: red;

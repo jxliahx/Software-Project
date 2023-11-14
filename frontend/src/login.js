@@ -6,6 +6,7 @@ import {eye} from 'react-icons-kit/feather/eye';
 import { Link } from 'react-router-dom';
 import { useHistory } from "react-router-dom";
 import axios from "axios";
+import "./login.css";
 
 export default function Login() {
   const {
@@ -44,16 +45,18 @@ export default function Login() {
     }
   };
   return (
+    <div className="bBackgroundStrip">
+    <div className="bBackgroundImage"></div>
     <div className="ContainerK">
-      <h1 className="wb">Welcome Back!</h1>
-      <form className="loginBox" onSubmit={handleSubmit(onSubmit)}>
-        <p>Username:</p>
-        <input
+      <div className="wb">Welcome Back!</div>
+      <form className="bloginBox" onSubmit={handleSubmit(onSubmit)}>
+        <p className='bLabels'>Username:</p>
+        <input className="binput"
           {...register("username", { required: true })}
           style={errors.uname && { border: "2px solid red" }}
         />
-        <p>Password:</p>
-        <input
+        <p className='bLabels'>Password:</p>
+        <input className="binput"
           type={type}
           {...register("password", {
             required: true,
@@ -71,13 +74,14 @@ export default function Login() {
           <Icon className="absolute mr-10" icon={icon} size={20} />
         </span>
         {errors.password && <error>{errors.password.message}</error>}
-        <button className="lb" type="submit">
+        <button className="Button321" type="submit">
           Login
         </button>
         <p className="nm">
           Not a member?<Link to="/signup">Sign Up Here</Link>
         </p>
       </form>
+    </div>
     </div>
   );
 }
