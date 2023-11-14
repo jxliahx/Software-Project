@@ -1,113 +1,70 @@
-import {React, useState} from 'react'
+import React, { useState } from "react";
+import axios from "axios";
 import "./createProject.css";
 import { SearchBar } from "./Components/searchBar";
 import { SearchResultsList } from "./Components/searchResultsList";
-import TaskModalPortal from "./Components/taskModalPortal";
-import Modal from "./Components/taskModal";
 import {Link} from 'react-router-dom';
 
-// const Button = styled.button `
-//     color: #e5eaf5;
-//     font-family: "Poppins";
-//     font-size: 20pt;
-//     width: 300px;
-//     height: 70px;
-//     background-color: #8458B3;
-//     border-radius: 2cm;
-//     border-style: hidden;
-//     align-self: center;
-//     margin-top: 20px;
-//     transition: ease background-color 250ms;
-//     &:hover {
-//         background-color: #5c3881;
-//       }
-// `;
-
-/*function CreatePage() {
-    
-    return(
-        <div className='TitleContainer'>
-            <div>
-                <header className='Title'>
-                    Create a Project
-                </header>
-            </div>
-
-            <div>
-                <textarea 
-                    className='TitleText'
-                    name="projectTitle"
-                    defaultValue={"Add a Project Title"}
-                    rows={1}
-                />
-            </div>
-
-            <Card />
-
-            <Button>
-                Create Project
-            </Button>
-
-
-        </div>
-
-    )
-}*/
-
 function CreateProject() {
+
   const [tasks] = useState([
     {
-      title: "Task1",
+      title: "Task 1",
     },
     {
-      title: "Task2",
+      title: "Task 2",
     },
     {
-      title: "Task3",
+      title: "Task 3",
     },
     {
-      title: "Task4",
+      title: "Task 4",
     },
     {
-      title: "Task5",
+      title: "Task 5",
     },
     {
-      title: "Task6",
+      title: "Task 6",
     },
   ]);
 
   const [results, setResults] = useState([]);
 
-  const [showModal, setShowModal] = useState(false);
+  // const [showModal, setShowModal] = useState(false);
 
-  const openModal = () => setShowModal(true);
-  const closeModal = () => setShowModal(false);
+  // const openModal = () => setShowModal(true);
+  // const closeModal = () => setShowModal(false);
 
-  // const [isOpen, setIsOpen] = useState(false);
+  function handleSubmit(e) {
+    e.preventDefault();
 
-  // const openModal = () => {
-  //     setIsOpen(true);
-  //   };
+    const form = e.target;
+    const formData = new formData(form);
 
-  //   const closeModal = () => {
-  //     setIsOpen(false);
-  //   };
+    // fetch data
+    fetch('/some-api', { method: form.method, body: formData });
+}
 
   return (
+    <form method="post" onSubmit={handleSubmit}>
     <div>
       <div className="TitleContainer-cp">
         <header className="Title-cp">Create a Project</header>
-        <input class="createP"type="text" placeholder="Project Name"></input>
+        <input 
+        className="createP" 
+        type="text" 
+        placeholder="Project Name"
+        />
       </div>
-      <div>
+      {/* <div>
         <TaskModalPortal
           visible={showModal}
           title="Portal Modal"
           description="I was rendered usign portals"
           onClose={closeModal}
         />
-        {/* <button onClick={openModal}>Show Modal</button> */}
-      </div>
+        <button onClick={openModal}>Show Modal</button> 
+      </div> */}
       <div className="BigBox-cp">
         <div className="Container-cp">
           <div className="Tasks-cp">
@@ -115,28 +72,22 @@ function CreateProject() {
               <div key={i} className="Task-cp">
                 <header className="TaskTitle-cp">{task.title}</header>
                 <p></p>
-               <Link to="/createTask"><button className="TaskButton-cp" onClick={openModal}>
+               <Link to="/createTask">
+                <button className="TaskButton-cp" >
                   +
-                </button></Link>
-
-                {/*{isOpen && (
-                                        <Modal onClose={closeModal} />
-                                    )} */}
+                </button>
+                </Link>
               </div>
             ))}
           </div>
-        </div>
-        <div className="MemberContainer-cp">
-          <header className="AddTitle-cp">Add members</header>
-          <div>
-            <SearchBar setResults={setResults} />
-            {results && results.length > 0 && (
-              <SearchResultsList results={results} />
-            )}
+          <div className='ButtonBox-cp'>
+            <button className='SubmitButton-cp'>Create Task</button>
           </div>
         </div>
-      </div>
+        <input type="submit" value="Create" />
+      </form>
     </div>
+    </form>
   );
 }
 

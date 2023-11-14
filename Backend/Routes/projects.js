@@ -82,6 +82,16 @@ router.get("/openUsers/:projectID", (req, res) => {
   });
 });
 
+// This API return a project based on projectName.
+router.get("/detail/:projectName", (req, res) => {
+  const sql = `SELECT * FROM Projects WHERE ProjectName = ?`;
+  const value = [req.params.projectName];
+  dbConnection.query(sql, [value], (err, result) => {
+    if (err) return res.json({ Status: false, Error: err });
+    return res.json(result);
+  });
+});
+
 module.exports = router;
 
 
