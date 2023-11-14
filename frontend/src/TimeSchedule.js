@@ -9,7 +9,7 @@ function TimeSchedule({ date, onClose }) {
       <div className='dayScheduleHeader'>
         <h2>{date.toDateString()}</h2>
       </div>
-      <p>Hello</p>
+     
     </div>
   );
 }

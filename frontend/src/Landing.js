@@ -64,7 +64,7 @@ function Landing() {
         {" "}
         Current Projects
         <ul className="list-landing">
-          <section class="currProjacts-landing">
+          <section class="currProjects-landing">
             {" "}
             My Projects:
             {padmins.map((padmin) => (
@@ -104,7 +104,6 @@ function Landing() {
           </section>
         </ul>
       </div>
-      <div className="content2-landing">content2</div>
     </div>
   );
 }
