@@ -1,5 +1,6 @@
 import {React, useState, useRef} from 'react'
 import './createTask.css';
+import NavigationBar from "./NavigationBar";
 
 function CreateTask () {
 
@@ -32,6 +33,7 @@ function CreateTask () {
     }
 
     return (
+        <div><NavigationBar/>
         <form method="post" onSubmit={handleSubmit}>
         <div >
             <div className="TitleContainer-ct">
@@ -94,6 +96,7 @@ function CreateTask () {
 
         </div>
         </form>
+        </div>
     )
 }
 
