@@ -1,6 +1,6 @@
 
   
-  .TitleContainer {
+  .TitleContainer-ct {
     background-color: #d0bdf4;
     min-height: 5vh;
     display: flex;
@@ -8,7 +8,7 @@
     justify-content:flex-start;
   }
   
-  .Title-font {
+  .Title-ct-font {
     font-family: "Poppins", extrabold;
   }
   
@@ -28,7 +28,7 @@
     margin-top: 100px;
   }
   
-  .oldButton {
+  .oldButton-ct {
     color: #e5eaf5;
     font-family: "Poppins";
     font-size: 20pt;
@@ -41,7 +41,7 @@
     margin-top: 20px;
   }
 
-  .AddTaskTitle {
+  .AddTaskTitle-ct {
     color: #8458B3;
     font-family: "Poppins";
     font-size: 28pt;
@@ -57,7 +57,7 @@
     align-self: auto;
   }
 
-  .TaskTitle {
+  .TaskTitle-ct {
     color: #8458B3;
     font-size: 26pt;
     align-items: center;
@@ -65,7 +65,7 @@
     font-family: "Poppins", extrabold;
   }
 
-  .AddTitle {
+  .AddTitle-ct {
     color: #8458B3;
     font-size: 18pt;
     text-align: center;
@@ -87,14 +87,14 @@
     color: #8458B3;
   }
 
-  .ContainerJ {
+  .Container-ct {
     max-width: calc(100% - 500px);
     width: 100%;
     padding-right: 10px;
     flex-direction: column;
   }
 
-  .BigBox {
+  .BigBox-ct {
     /* max-width: calc(100% - 500px);
     width: 100%;
     margin: auto;
@@ -117,14 +117,14 @@
     align-items: center;
   }*/
 
-  .TasksJ {
+  .Tasks-ct {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     flex-direction: row;
   }
 
-  .MemberContainer {
+  .MemberContainer-ct {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
@@ -142,7 +142,7 @@
     margin-bottom: 20px;
   }
 
-  .AddMember {
+  .AddMember-ct {
     max-width: calc(33.33% - 20px);
     width: 100%;
     height: 520px;
@@ -155,7 +155,7 @@
     margin-bottom: 20px;
   }
 
-  .TaskJ {
+  .Task-ct {
     
     max-width: calc(33.33% - 20px);
     width: 100%;
@@ -176,7 +176,7 @@
     color: #643e8d;
   } */
 
-  .SubmitButton {
+  .SubmitButton-ct {
     color: #e5eaf5;
     font-family: "Poppins";
     font-size: 20pt;
@@ -199,7 +199,7 @@
     margin-top: -2%;
   }
 
-  .TaskButton {
+  .TaskButton-ct {
     color: #e5eaf5;
     font-family: "Poppins";
     font-size: 40pt;
@@ -220,11 +220,11 @@
     transition: .3s;
   }
 
-  .TaskButton:hover{
+  .TaskButton-ct:hover{
     background-color: #643e8d;
   }
 
-  .Title {
+  .Title-ct {
     color: #8458B3;
     font-size: 48pt;
     text-align: center;
@@ -235,7 +235,7 @@
     margin-top: 20px;
   }
 
-  .TaskContainer {
+  .TaskContainer-ct {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
@@ -254,14 +254,14 @@
     font-size: 20px;
   }
 
-  .TaskContainer2 {
+  .TaskContainer2-ct {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
     flex-direction: column;
   }
 
-  .Assign {
+  .Assign-ct {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
@@ -299,4 +299,7 @@ input {
   width: 100%;
   margin: auto;
 }
+<<<<<<< HEAD:frontend/src/createPage.css
 
+=======
+>>>>>>> 9b3d4de08b84ea6bae0ef272df3ea1d4ea877c7e:frontend/src/createTask.css

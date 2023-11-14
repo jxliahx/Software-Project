@@ -7,7 +7,7 @@ body {
     font-family: "Poppins", bold;
 }
   
-.containerN {
+.container-landing {
     background-color: #d0bdf4;;  
     display: grid;
     height: 100vh;
@@ -24,7 +24,7 @@ body {
     text-align: center;
 }
   
-.nav {
+.nav-landing {
     background: #d0bdf4;
     grid-area: nav;
     text-align: end;
@@ -32,7 +32,7 @@ body {
     font-size: 22px;
   }
   
-.main {
+.main-landing {
     background: #8458b3;
     color:  #e5eaf5; 
     grid-area: main;
@@ -48,7 +48,7 @@ body {
     grid-area: sidebar;
   }
   
-.content1 {
+.content1-landing {
     background: #8458b3;
     color:  #e5eaf5; 
     grid-area: content1;
@@ -60,7 +60,7 @@ body {
     
   }
   
-.content2 {
+.content2-landing {
     background: #8458b3;
     color:  #e5eaf5; 
     grid-area: content2;
@@ -71,7 +71,7 @@ body {
     padding-top: var(--main-padding);
 }
   
-.content3 {
+.content3-landing {
     background: #8458b3;
     color:  #e5eaf5; 
     grid-area: content3;
@@ -104,9 +104,6 @@ body {
 
 .liFont{
     font-size: 22px; 
-}
+} 
 
-.liFont:hover {
-    background-color: #494d5f; /* Background color on hover */
-    color: #a0d2eb;
-}
+
