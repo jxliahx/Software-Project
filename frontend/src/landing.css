@@ -30,6 +30,7 @@ body {
     text-align: end;
     margin-top: 50px; 
     font-size: 22px;
+    margin-right: 50;
   }
   
 .main-landing {
@@ -41,6 +42,9 @@ body {
     border-color: #e5eaf5;  
     border-radius: var(--main-radius);
     padding-top: var(--main-padding);
+    width: 400px;
+    margin-right: 200px;
+    height: 600px;
   }
   
 .sidebar {
@@ -51,12 +55,14 @@ body {
 .content1-landing {
     background: #8458b3;
     color:  #e5eaf5; 
-    grid-area: content1;
     border-style: dashed; 
     border-width: 3px;
     border-color: #e5eaf5;  
     border-radius: var(--main-radius);
     padding-top: var(--main-padding);
+    height: 600px;
+    width: 400px;
+    margin-left: 250px;
     
   }
   
@@ -69,6 +75,8 @@ body {
     border-color: #e5eaf5;  
     border-radius: var(--main-radius);
     padding-top: var(--main-padding);
+    width: 700px;
+    margin-left: 50px;
 }
   
 .content3-landing {

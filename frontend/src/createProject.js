@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import NavigationBar from "./NavigationBar";
 import "./createProject.css";
 import { SearchBar } from "./Components/searchBar";
 import { SearchResultsList } from "./Components/searchResultsList";
@@ -48,8 +49,8 @@ function CreateProject() {
         </div>
         <input type="submit" value="Create" />
       </form>
-      </div>
-     
+    </div>
+   
   );
 }
 
