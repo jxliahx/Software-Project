@@ -7,8 +7,8 @@ body {
     font-family: "Poppins", bold;
 }
   
-.container {
-    background-image: url("clouds.png");
+.container2 {
+    /*background-image: url("clouds.png");*/
     display: grid;
     height: 100vh;
     grid-template-columns: 1.0fr 1.0fr 1fr 1fr;
@@ -20,20 +20,23 @@ body {
     grid-gap: 0.8rem;
     font-weight: 800;
     font-size: 40px;
-    color:  #494d5f;
+    color:  #8458b3;
     text-align: center;
+    padding-left: 1.7%;
+    padding-right: 3%;
+    padding-bottom: 3%;
+    padding-top: 1%;
 }
 
-.nav {
+.nav2 {
     grid-area: nav;
     text-align: center;
     font-size: 40px;
-    position: relative;
   }
 
-button3{
+.button3{
     background: none;
-    color: #494d5f;
+    color: #8458b3;;
     border: none;
     font-size: 20px;
     padding: 5px;
@@ -42,26 +45,27 @@ button3{
     right: 600px;
     top: 10px;
 }
-button3:hover {
+
+.button3:hover {
     background-color: #494d5f; /* Background color on hover */
     color: #a0d2eb;
 }
   
-.main {
-    background-color:#b7a4b4da;
+.main2 {
+    background-color:#e5eaf5;
    
     grid-area: main;
     border-radius: var(--main-radius);
     padding-top: var(--main-padding);
     border-style: dashed;
     border-width: 5px;
-    border-color:#727088;
-    position: relative;
+    border-color:#8458b3;
+    margin-bottom: 40px;
   }
 
-button4{
+.button4{
     background: none;
-    color: #494d5f;
+    color: #8458b3;;
     border: none;
     font-size: 20px;
     padding: 5px;
@@ -70,57 +74,60 @@ button4{
     right: 200px;
     top: 30px;
 }
-button4:hover {
+.button4:hover {
     background-color: #494d5f; /* Background color on hover */
     color: #a0d2eb;
 }
   
 
   
-.content1 {
+.content1b {
   
     grid-area: content1;
     border-radius: var(--main-radius);
-    padding-top: var(--main-padding);
-    position: relative;
+    padding: var(--main-padding);
     
     
 }
   
-.content2 {
+.content2b {
     grid-area: content2;
     border-style: dashed; 
     border-width: 5px;
-    border-color: #727088; 
-    background-color:#b7a4b4da;
+    border-color: #8458b3; 
+    background-color:#e5eaf5;
     font-size: 30px;
     border-radius: var(--main-radius);
-    padding-top: var(--main-padding);
+    padding: var(--main-padding);
+    margin-bottom: 55px;
   }
   
-.content3 {
+.content3b {
     grid-area: content3;
     border-style: dashed; 
     border-width: 5px;
-    border-color:#727088;
-    background-color:#b7a4b4da;
+    border-color:#8458b3;
+    background-color:#e5eaf5;
     font-size: 30px;
     border-radius: var(--main-radius);
-    padding-top: var(--main-padding);
+    padding: var(--main-padding);
+    margin-bottom: 40px;
+    margin-top: -50px;
   }
   
 
 
-  section{
+  .sectionb{
     font-size: 28px;
     text-align: left;
     border-style: dashed;
     border-width: 5px;
-    border-color:#727088;
-    background-color:#b7a4b4da;
+    border-color:#8458b3;
+    background-color:#e5eaf5;
     margin-bottom: 5%; 
     border-radius: var(--main-radius);
-
+    padding: var(--main-padding);
+    height: 70%;
 }
 
 
@@ -128,18 +135,20 @@ button4:hover {
     list-style-type: circle;
     
 }
-ul{
+.ulB{
     margin-top: 5%; 
 }
+
 li{
     text-align: left;
     list-style-type: none; 
     font-size: 22px; 
+    color:#8458b3;;
 }
 
 li:hover {
     background-color: #494d5f; /* Background color on hover */
-    color: #a0d2eb;
+    color: #d1c0cfda;
 }
 
 .taskList{
@@ -154,9 +163,9 @@ li:hover {
     margin-left: 10px;
 }
 
-button1 {
+.button1 {
     background: none;
-    color: #494d5f;
+    color: #8458b3;;
     border: none;
     font-size: 20px;
     padding: 5px;
@@ -166,17 +175,90 @@ button1 {
     top: 30px;
 }
 
-button1:hover {
+.button1:hover {
     background-color: #494d5f; /* Background color on hover */
     color: #a0d2eb;
 }
 
-button2 {
+.button2 {
+    border: none;
+    font-size: 20px;
+    position: center;
+    padding: 10px;
+    border-radius: 8px; 
+    background-color: #8458b3;; /* Background color on hover */
+    color: #e0cededa;
+}
+
+.button2:hover {
+    background-color: #494d5f; /* Background color on hover */
+    color: #a0d2eb;
+}
+
+.button3b {
+    border: none;
+    font-size: 20px;
+    position: center;
+    padding: 10px;
+    border-radius: 8px; 
+    background-color: #8458b3;; /* Background color on hover */
+    color: #e0cededa;
+    margin-top: 450px;
+}
+
+.button3b:hover {
+    background-color: #494d5f; /* Background color on hover */
+    color: #a0d2eb;
+}
+
+.newTaskA {
+    border: none;
+    font-size: 20px;
+    position: center;
+    padding: 10px;
+    border-radius: 8px; 
+    background-color: #8458b3; /* Background color on hover */
+    color: #e0cededa;
+    margin-top: 450px;
+}
+
+.newTaskA:hover {
+    background-color:#494d5f; /* Background color on hover */
+    color: #a0d2eb;
+}
+
+.currentTitle {
+    color: #8458b3;
+    font-family: "Poppins", bold;
+}
+
+.editButton {
+    border: none;
+    font-size: 20px;
+    width: 32px;
+    border-radius: 8px; 
+    background-color: #8458b3; /* Background color on hover */
+    color: #e0cededa;
+}
+
+
+.editButton:hover {
+    background-color: #494d5f; /* Background color on hover */
+    color: #a0d2eb;
+}
+
+.navButtonStyle {
     border: none;
     font-size: 20px;
     position: center;
     padding: 10px;
     border-radius: 8px; 
     background-color: #494d5f; /* Background color on hover */
-    color: #a0d2eb;
+    color: #e0cededa;
+    margin-top: 450px;
+}
+
+.navButtonStyle:hover {
+    background-color: #363b4e; /* Background color on hover */
+    color: #b19eaeda;
 }

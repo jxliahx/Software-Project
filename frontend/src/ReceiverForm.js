@@ -28,11 +28,11 @@ function ReceiverForm() {
       ) : (
         <div>
           <p>
-            <div className='icon'>< AiOutlineFundProjectionScreen /></div>
+            <div className='ricon'>< AiOutlineFundProjectionScreen /></div>
             You've been invited to join the  XXXXX project.
           <div className="button-container">
-            <button1 onClick={handleAcceptInvitation}><AiOutlineCheckCircle/></button1> 
-            <button1 onClick={handleDeclineInvitation} className="decline-button"><MdOutlineCancel /></button1>
+            <button className="rButton" onClick={handleAcceptInvitation}><AiOutlineCheckCircle/></button> 
+            <button className="rButton" onClick={handleDeclineInvitation}><MdOutlineCancel /></button>
           </div>
           </p>
         </div>

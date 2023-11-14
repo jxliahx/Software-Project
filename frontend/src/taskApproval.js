@@ -1,6 +1,7 @@
 /*import CheckIcon from '@mui/icons-material/Check';*/
 /*import CloseIcon from '@mui/icons-material/Close';*/
 import React, { useState } from 'react';
+import './taskApproval.css';
 export default function TaskApproval(){
 
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -25,7 +26,7 @@ export default function TaskApproval(){
   
 
 return (
-    <div class="Container2">
+    <div class="Container-ta">
         <div className="navigation">
       <button onClick={toggleDropdown} className="dropdown-button">
         Menu
@@ -42,18 +43,18 @@ return (
         </ul>
       )}
     </div>
-        <h1 class="t1">Task 1</h1>
+        <h1 class="t1-ta">Task 1</h1>
         <form>
-            <div class="taskDiv">
-                <h2 class="task">Completed by: Member 1</h2>
-                <div class="files">
-                <p class="f">Files</p>
+            <div class="taskDiv-ta">
+                <h2 class="task-ta">Completed by: Member 1</h2>
+                <div class="files-ta">
+                <p class="f-ta">Files</p>
                 <p>File 1</p>
                 <p>File 2</p>
                 </div>
             </div>
-            <div class="yn">
-            <button class="yes"></button><button class="no"></button>
+            <div class="yn-ta">
+            <button class="yes-ta"></button><button class="no-ta"></button>
             </div>
         </form>
     </div>

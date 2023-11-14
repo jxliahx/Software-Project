@@ -1,5 +1,9 @@
-import React, { useState } from 'react';
+
+import React, { useEffect, useState } from "react";
+import { useHistory } from "react-router-dom";
+import './task.css';
 import { useDropzone } from 'react-dropzone';
+import axios from "axios";
 export default function Task() {
   const [uploadedFiles, setUploadedFiles] = useState([]);
   const { getRootProps, getInputProps } = useDropzone({
@@ -28,10 +32,26 @@ export default function Task() {
     { label: 'Signout', url: '/contact' },
   ];
 
-   
+  const searchParams = new URLSearchParams(window.location.search);
+  const taskID = searchParams.get("taskID");
+  const [task, setTask] = useState([]);
+  
+
+  useEffect(() => {
+    axios
+      .get(
+        "http://localhost:5000/api/users/detail/" + localStorage.getItem("id")
+      )
+      .then((result) => {
+        setTask(result.data[0]);
+      })
+      .catch((err) => console.log(err));
+  }, [taskID]);
+  
+  
     return (
-        <div class="Container3">
-        <h1 class="title">Example Project: Task 1</h1>
+        <div class="Container-task">
+        <h1 class="title-task">Example Project: {task.taskName}</h1>
         <div className="navigation">
       <button onClick={toggleDropdown} className="dropdown-button">
         Menu
@@ -48,21 +68,23 @@ export default function Task() {
         </ul>
       )}
     </div>
-        <div class="id">
-        <div class="instructions">
-            <h2>Instructions</h2>
-            <div class="i">
-            <form></form>
+        <div class="id-task">
+        <div class="instructions-task">
+            <h2 class="h2-task">Instructions</h2>
+            <div class="i-task">
+            <form>
+              {task.Description}
+            </form>
             </div>
         </div>
-        <div class="dates">
-        <p>Date Assigned: </p>
-        <p>Date Due: </p>
+        <div class="dates-task">
+        <p>Date Assigned: {task.AssignDate} </p>
+        <p>Date Due: {task.DueDate} </p>
         </div>
         </div>
-        <div class="fileUpload">
-            <h3>File Upload</h3>
-            <div class="fileContainer" {...getRootProps()}>
+        <div class="fileUpload-task">
+            <h3 class="h3-task">File Upload</h3>
+            <div class="fileContainer-task" {...getRootProps()}>
       <input {...getInputProps()} />
       <p>Drag and drop files here or click to browse.</p>
       <ul>
@@ -71,7 +93,7 @@ export default function Task() {
         ))}
       </ul>
     </div>
-            <button class="approve">Submit for Approval</button>
+            <button class="approve-task">Submit for Approval</button>
         </div>
         
         </div>
