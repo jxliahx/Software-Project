@@ -33,6 +33,7 @@ function CreateProject() {
   };
 
   return (
+    <div><NavigationBar/>
     <div>
       <form onSubmit={handleSubmit}>
         <div className="TitleContainer">
@@ -49,6 +50,7 @@ function CreateProject() {
         </div>
         <input type="submit" value="Create" />
       </form>
+    </div>
     </div>
   );
 }
