@@ -43,7 +43,7 @@ body {
     border-radius: var(--main-radius);
     padding-top: var(--main-padding);
     width: 400px;
-    margin-right: 200px;
+    margin-right: 250px;
     height: 600px;
   }
   
@@ -113,5 +113,29 @@ body {
 .liFont{
     font-size: 22px; 
 } 
+
+.currProjects-landing {
+  background-color: #8458b3;
+  border: none;
+  height: 200px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.shared-landing {
+  background-color: #8458b3;
+  border: none;
+  height: 200px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.deadlines-landing
+{
+  background-color: #8458b3;
+  border: none;
+  margin-left: 20px;
+  cursor: pointer;
+}
 
 
