@@ -47,12 +47,9 @@ function CreateProject() {
           ></input>
         </div>
         <input type="submit" value="Create" />
-      </div>
-
-      </div>
       </form>
-    </div>
-    </form>
+      </div>
+     
   );
 }
 

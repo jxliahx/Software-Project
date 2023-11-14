@@ -28,11 +28,11 @@ function TaskForm() {
         <p>Invitation Declined!</p>
       ) : (
         <div>
-          <p><div className='icon'>< BsListTask /></div>
+          <p><div className='ricon'>< BsListTask /></div>
             You've been assigned to XXXXX task.
           <div className="button-container">
-            <button onClick={handleAcceptInvitation}>< AiOutlineCheckCircle /></button> 
-            <button onClick={handleDeclineInvitation} className="decline-button"> < MdOutlineCancel /></button>
+            <button className="rButton" onClick={handleAcceptInvitation}>< AiOutlineCheckCircle /></button> 
+            <button className="rButton" onClick={handleDeclineInvitation}> < MdOutlineCancel /></button>
           </div>
           </p>
         </div>
