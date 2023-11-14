@@ -36,8 +36,8 @@ function CreateProject() {
     <div><NavigationBar/>
     <div>
       <form onSubmit={handleSubmit}>
-        <div className="TitleContainer">
-          <header className="Title">Create a Project</header>
+        <div className="TitleContainer-cp">
+          <header className="Title-cp">Create a Project</header>
           <input
             className="createP"
             type="text"
@@ -48,7 +48,7 @@ function CreateProject() {
             }
           ></input>
         </div>
-        <input type="submit" value="Create" />
+        <button className="Create-cp" type="submit">Create</button>
       </form>
     </div>
     </div>

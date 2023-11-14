@@ -11,215 +11,17 @@
   .Title-font {
     font-family: "Poppins", extrabold;
   }
-  
-  /*
-  .Container {
-     flex-direction: row;
-    display: flex;
-    justify-content:flex-start;
-    background-color: #d0bdf4;
-    min-height: 100vh; 
-    background-color: #d0bdf4;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: row;
-     align-items: center; 
-    justify-content:flex-start;
-     font-size: calc(10px + 2vmin); 
-  }
-  */
-
-  .Graphic {
-    /* width: 700px;
-    margin-left: 50px; */
-    width: 60%;
-    height: 60%;
-  }
-  
-  .Slogan {
-    color: #8458B3;
-    font-size: 56pt;
-    align-items: start;
-    margin-left: 50px;
-    font-family: "Poppins", extrabold;
-    margin-top: 100px;
-  }
-  
-  .oldButton-cp {
-    color: #e5eaf5;
-    font-family: "Poppins";
-    font-size: 20pt;
-    width: 300px;
-    height: 70px;
-    background-color: #8458B3;
-    border-radius: 2cm;
-    border-style: hidden;
-    align-self: center;
-    margin-top: 20px;
-  }
-
-  .TitleText-cp {
-    color: #8458B3;
-    font-family: "Poppins";
-    font-size: 20pt;
-    background-color: #e5eaf5;
-    border-color: #8458B3;
-    border-width: 5px;
-    border-radius: 5cm;
-    resize:none;
-    width: 50%;
-  }
-
-  .TaskTitle-cp {
-    color: #8458B3;
-    font-size: 26pt;
-    align-items: center;
-    /* margin-left: 20px; */
-    font-family: "Poppins", extrabold;
-  }
-
-  .AddTitle-cp {
-    color: #8458B3;
-    font-size: 18pt;
-    align-items: center;
-    /* margin-left: 20px; */
-    font-family: "Poppins", extrabold;
-  }
-
-  *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", extrabold;
-  }
-
+ 
   body {
     background-color: #d0bdf4;
     color: #8458B3;
   }
 
   .Container-cp {
-    max-width: calc(100% - 500px);
-    width: 100%;
-
-    flex-direction: column;
-  }
-
-  .BigBox-cp {
-    /* max-width: calc(100% - 500px);
-    width: 100%;
+    max-width: 400px;
     margin: auto;
-    flex-direction: row; */
-
-    background-color: #d0bdf4;
-    min-height: 5vh;
-    display: flex;
-    flex-direction: row;
-    justify-content:center;
-  }
-
-  /*section {
-    min-height: 100vh;
-    display: flex;
+    text-align: center;
     flex-direction: column;
-    align-items: center;
-  }*/
-
-  .Tasks-cp {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    flex-direction: row;
-  }
-
-  .MemberContainer-cp {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    flex-direction: column;
-
-    max-width: calc(25%);
-    width: 100%;
-    height: 520px;
-    background: #e5eaf5;
-    border: solid #8458B3;
-    border-color: #8458B3;
-    border-width: 10px;
-    border-radius: 30px;
-    padding: 20px;
-    margin-bottom: 20px;
-  }
-
-  .AddMember-cp {
-    max-width: calc(33.33% - 20px);
-    width: 100%;
-    height: 520px;
-    background: #e5eaf5;
-    border: solid #8458B3;
-    border-color: #8458B3;
-    border-width: 10px;
-    border-radius: 30px;
-    padding: 20px;
-    margin-bottom: 20px;
-  }
-
-  .Task-cp {
-    
-    max-width: calc(33.33% - 20px);
-    width: 100%;
-    height: 250px;
-    background: #e5eaf5;
-    border: solid #8458B3;
-    border-color: #8458B3;
-    border-width: 10px;
-    border-radius: 30px;
-    padding: 20px;
-    margin-bottom: 20px;
-
-    transition: .3s;
-  }
-
-  /* .Task:hover{
-    background: #acb5c9;
-    color: #643e8d;
-  } */
-
-  /* .SubmitButton-cp {
-    color: #e5eaf5;
-    font-family: "Poppins";
-    font-size: 20pt;
-    width: 300px;
-    height: 70px;
-    background-color: #8458B3;
-    border-radius: 2cm;
-    border-style: hidden;
-    align-self: center;
-    margin-top: 20px;
-  } */
-
-  .TaskButton-cp {
-    color: #e5eaf5;
-    font-family: "Poppins";
-    font-size: 40pt;
-    width: 70px;
-    height: 70px;
-
-    background-color: #8458B3;
-    border-radius: 5cm;
-    border-style: hidden;
-    align-self: center;
-    margin-top: calc((10% - 20px));
-    margin-left: calc((35%));
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    transition: .3s;
-  }
-
-  .TaskButton-cp:hover{
-    background-color: #643e8d;
   }
 
   .Title-cp {
@@ -233,14 +35,10 @@
     margin-top: 20px;
   }
 
-  input {
-    width: 100%;
-    margin: auto;
-  }
 
   .createP {
-      max-width: 90%;
-      width: 100%;
+    margin-top: 200px;
+      max-width: 50%;
       background: #e5eaf5;
       border: solid #8458B3;
       border-color: #8458B3;
@@ -252,25 +50,30 @@
       font-family: "Poppins", extrabold;
   }
 
-  .ButtonBox-cp {
-    margin-left: 54%;
-    margin-top: -2%;
+ 
+  .Create-cp {
+    background-color: #d0bdf4;
+    border: none;
+    color: #8458b3;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: auto; /* Center horizontally */
+    font-size: 40px; /* Adjust the font size */
+    border-radius: 10px;
+    display: block; /* Make it a block-level element to center vertically */
+    border: 3px solid #8458b3;
   }
 
-.SubmitButton-cp {
-  color: #e5eaf5;
-  font-family: "Poppins";
-  font-size: 20pt;
-  width: 300px;
-  height: 70px;
-  background-color: #8458B3;
-  border-radius: 2cm;
-  border-style: hidden;
-  align-self: center;
-  margin-top: 20px;
-  justify-self: center;
-}
+  .Create-cp:hover{
+    background-color: #494d5f; /* Background color on hover */
+  color: #a0d2eb;
+  border: none;
+  }
+  
+    
+      
+  
 
-.SubmitButton-ct:hover{
-  background-color: #643e8d;
-}
+  
+
+
