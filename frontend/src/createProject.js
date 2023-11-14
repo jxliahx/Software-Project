@@ -85,7 +85,7 @@ function CreateProject() {
           </div>
         </div>
         <input type="submit" value="Create" />
-      </form>
+      </div>
     </div>
     </form>
   );
