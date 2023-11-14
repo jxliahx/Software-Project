@@ -9,7 +9,7 @@
 
 }
 
-.form-container {
+.lform-container {
   border: 3px solid #8458b3;
   padding: 40px;
   margin: 40px;
@@ -50,7 +50,7 @@
   margin: 5px;
   font-size: 40px;
 }
-.inviteButton1 {
+.rButton {
   background-color: #d0bdf4;
   border: none;
   color: #8458b3; /* Set the text color of the buttons */
@@ -67,7 +67,7 @@
   background-color: #494d5f; /* Background color on hover */
   color: #a0d2eb;
 }
-.inviteButton1:hover {
+.rButton:hover {
   background-color: #494d5f; /* Background color on hover */
   color: #a0d2eb;
 }
@@ -79,13 +79,14 @@
   margin: 20px; /* Adjust the margin as needed */
 }
 
-.dropdown-button {
+.ldropDown {
   background-color: #d0bdf4; /* Button background color */
   color: #8458b3; /* Button text color */
-  border: none;
+  border: 3px solid #8458b3;
+  border-radius: 5px;
   padding: 10px 20px;
   cursor: pointer;
-  font-size: 30pt; 
+  font-size: 16pt; 
   font-family: "Poppins"; /* Change the font-family */
   font-weight: bold; /* Make the text bold */
 }
@@ -177,27 +178,13 @@
     margin: 5px;
     font-size: 40px;
   }
-  .inviteButton1 {
-    background-color: #d0bdf4;
-    border: none;
-    color: #8458b3; /* Set the text color of the buttons */
-    top: 10px;
-    padding:10px 20px;
-    cursor: pointer;
-    margin: 5px;
-    position: relative;
-    font-size: 40px;
-    border-radius: 5px;
-  }
+  
 
   .inviteButton:hover {
     background-color: #494d5f; /* Background color on hover */
     color: #a0d2eb;
   }
-  .inviteButton1:hover {
-    background-color: #494d5f; /* Background color on hover */
-    color: #a0d2eb;
-  }
+
   
   .navigation {
     position: absolute;
@@ -245,10 +232,28 @@
     color: #a0d2eb;
   }
 
-  .icon{
-    position: absolute;
-    margin-left:60px;
+  .ricon{
+    
+    margin-left:10px;
     font-size: 40px;
     }
+
+.lButton{
+  background-color: #d0bdf4;
+    border: none;
+    color: #8458b3; /* Set the text color of the buttons */
+    top: 10px;
+    padding:10px 20px;
+    cursor: pointer;
+    margin: 5px;
+    position: relative;
+    font-size: 40px;
+    border-radius: 5px;
+}
+
+.lButton:hover {
+  background-color: #494d5f; /* Background color on hover */
+  color: #a0d2eb;
+}
   
   
