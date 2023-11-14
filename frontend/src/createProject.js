@@ -86,10 +86,10 @@ function CreateProject() {
         </div>
         <input type="submit" value="Create" />
       </div>
+
       </div>
       </form>
-  
-    
+
   );
 }
 
