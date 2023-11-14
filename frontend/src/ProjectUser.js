@@ -1,6 +1,7 @@
 import React from 'react';
 import './projectUser.css';
- 
+import NavigationBar from "./NavigationBar";
+import "./NavigationBar.css";
 
 
 function ProjectUser() {
@@ -9,12 +10,13 @@ function ProjectUser() {
   const projectName = searchParams.get("projectName");
     return (
       <div className="container">
+        <NavigationBar className="navButtonStyle"/>
         <div className="nav"> Project: {projectName}</div>
 
         <div className="content1">
           {" "}
           Members
-          <section>
+          <section className="MemberBox">
             <ul>
               <li>Member1</li>
               <li>Member2</li>
