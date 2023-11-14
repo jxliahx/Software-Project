@@ -39,32 +39,32 @@ function Landing() {
       .catch((err) => console.log(err));
   }, [projects]);
   return (
-    <div className="container">
-      <div className="sidebar">
+    <div className="container-landing">
+      <div className="sidebar-landing">
         <NavigationBar />
       </div>
 
-      <div className="nav">
+      <div className="nav-landing">
         {" "}
         Welcome {user.FirstName} {user.LastName}!
       </div>
 
-      <div className="main">
+      <div className="main-landing">
         {" "}
         Upcoming Deadlines
-        <ul className="list">
-          <section>
+        <ul className="list-landing">
+          <section class="deadlines-landing">
             <li>Project1</li>
             <li>Project2</li>
           </section>
         </ul>
       </div>
 
-      <div className="content1">
+      <div className="content1-landing">
         {" "}
         Current Projects
-        <ul className="list">
-          <section>
+        <ul className="list-landing">
+          <section class="currProjacts-landing">
             {" "}
             My Projects:
             {padmins.map((padmin) => (
@@ -83,8 +83,8 @@ function Landing() {
             ))}
           </section>
         </ul>
-        <ul className="list">
-          <section>
+        <ul className="list-landing">
+          <section class="shared-landing">
             {" "}
             Shared With Me:
             {projects.map((project) => (
@@ -104,7 +104,7 @@ function Landing() {
           </section>
         </ul>
       </div>
-      <div className="content2">content2</div>
+      <div className="content2-landing">content2</div>
     </div>
   );
 }

@@ -1,32 +1,39 @@
-import {React, useState} from 'react'
-import './createPage.css';
-
-// const [users] = useState([
-//     {
-//         title: 'Task1',
-//     },
-//     {
-//         title: 'Task2',
-//     },
-//     {
-//         title: 'Task3',
-//     },
-//     {
-//         title: 'Task4',
-//     },
-//     {
-//         title: 'Task5',
-//     },
-//     {
-//         title: 'Task6',
-//     },
-
-// ])
+import {React, useState, useRef} from 'react'
+import './createTask.css';
 
 function CreateTask () {
 
+    function handleSubmit(e) {
+        e.preventDefault();
+
+        const form = e.target;
+        const formData = new formData(form);
+
+        // fetch data
+        fetch('/some-api', { method: form.method, body: formData });
+    }
+
+    const memberList = [
+        'user1',
+        'user2',
+        'user3'
+    ];
+
+    const listItems = memberList.map (member =>
+        <li>{member}</li>
+        )
+    
+
+    const [date, setDate] = useState('');
+    const dateInputRef = useRef(null);
+          
+    const handleChange = (e) => {
+        setDate(e.target.value);
+    }
+
     return (
-        <div>
+        <form method="post" onSubmit={handleSubmit}>
+        <div >
             <div className="TitleContainer">
                 <header className='Title'>
                     Create a Task
@@ -52,9 +59,8 @@ function CreateTask () {
                         />
                             
                     </div>
-                    <div>
-                        <p>Enter Due Date: </p>
-                        <input class="DueDate" type="date" ></input>
+                    <div className='ButtonBox'>
+                        <button className='SubmitButton'>Create Task</button>
                     </div>
 
 
@@ -63,18 +69,31 @@ function CreateTask () {
                     <header className="AddTitle">
                         Assign member
                     </header>
+                    {/* temp data for now */}
                     <select>
                         <option value="someOption">Some option</option>
                         <option value="otherOption">Other option</option>
                     </select>
-
+                    <ul>{listItems}</ul>
+                    <div className="DueDate">
+                        <header className="AddTitle">
+                            Due date:
+                        </header>
+                        <input
+                            type="date"
+                            onChange={handleChange}
+                            ref={dateInputRef}
+                        />
+                        <p>Selected Date: {date}</p>
+                    </div>
                 </div>
+
             
             </div>
 
 
         </div>
-
+        </form>
     )
 }
 

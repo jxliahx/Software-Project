@@ -1,16 +1,14 @@
-import logo from './logo.svg';
+import logo from "./logo.svg";
 //import graphic from './sample.jpg'
-import graphic from './graphic.png';
-import './App.css';
-//import './KFstyle.css';
-import Home from './home';
-import Login from './login';
-import Signup from './signup';
-import TaskApproval from './taskApproval';
-import Task from './task';
-import Calendar1 from './Calendar';
-import Invitation from './Invitation';
-import Landing from './Landing';
+import graphic from "./graphic.png";
+import Home from "./home";
+import Login from "./login";
+import Signup from "./signup";
+import TaskApproval from "./taskApproval";
+import Task from "./task";
+import Calendar1 from "./Calendar";
+import Invitation from "./Invitation";
+import Landing from "./Landing";
 import Logout from "./logout";
 import CreateProject from "./createProject";
 import CreateTask from "./createTask";
