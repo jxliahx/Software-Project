@@ -56,7 +56,7 @@ function ProjectAdmin() {
       <div className="nav2">
         {" "}
         Project: {projectName}
-        <button>
+        <button className="editButton">
           <BiEdit />
         </button>
       </div>
@@ -64,7 +64,7 @@ function ProjectAdmin() {
       <div className="content1b">
         {" "}
         Members
-        <button>
+        <button className="editButton">
           <BiEdit />
         </button>
         <section className="sectionb">
@@ -81,14 +81,17 @@ function ProjectAdmin() {
             ))}
           </ul>
         </section>
-        <button>Send Invitation</button>
+        <button className="button2">Send Invitation</button>
       </div>
 
       <div className="main2">
-        <button>
-          <BiEdit />
-        </button>
-        <div className="title">Current Tasks</div>
+        <div className="currentTitle">
+          Current Tasks
+          <button className="editButton">
+            <BiEdit />
+          </button>
+        </div>
+        
         <ul>
           {openTasks.map((openTask) => (
             <li key={openTask.TaskID}>
@@ -96,7 +99,7 @@ function ProjectAdmin() {
                 <div className="smallGridItem">
                   <div className="title">
                     {openTask.TaskName}
-                    <button>
+                    <button className="editButton">
                       <BiEdit />
                     </button>
                   </div>
@@ -111,7 +114,11 @@ function ProjectAdmin() {
             </li>
           ))}
         </ul>
+        <button className="button3b">
+        <a className="newTaskA" href={"/createTask?project=" + projectID}>Add new task</a>
+        </button>
       </div>
+
 
       <div className="content2b">
         Awaiting Approval
@@ -135,7 +142,7 @@ function ProjectAdmin() {
                 <div className="smallGridItem">
                   <div className="title">
                     {closedTask.TaskName}
-                    <button>
+                    <button className="editButton">
                       <BiEdit />
                     </button>
                   </div>
@@ -151,9 +158,7 @@ function ProjectAdmin() {
           ))}
         </ul>
       </div>
-      <button>
-        <a href={"/createTask?project=" + projectID}>Add new task</a>
-      </button>
+
     </div>
   );
 }
